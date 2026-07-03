@@ -59,7 +59,7 @@ async function speak(text) {
   const utterance = new SpeechSynthesisUtterance(cleanText);
   utterance.voice = voice;
   utterance.lang = voice?.lang || "en-US";
-  utterance.rate = 0.5;
+  utterance.rate = 0.72;
   utterance.pitch = 1;
 
   window.speechSynthesis.cancel();
