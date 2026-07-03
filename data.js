@@ -97,43 +97,53 @@ window.LEARNING_DATA = {
   ],
   examples: [
     {
-      title: "早餐 / 早午餐",
+      title: "早餐與早午餐｜完整菜單原文",
       rows: [
-        ["smoked salmon, red onion", "煙燻鮭魚、紅洋蔥", "冷食系早餐、bagel 或 toast 類，口味偏鹹鮮。"],
-        ["avocado, poached eggs, feta cheese", "酪梨、水波蛋、菲達起司", "地中海風味，適合想吃蔬菜和蛋。"],
-        ["poached eggs, sauteed spinach, hollandaise", "水波蛋、炒菠菜、荷蘭醬", "類似班尼迪克蛋，醬汁偏奶油濃郁。"],
-        ["Croque Monsieur", "法式火腿起司熱三明治", "通常是火腿、起司、白醬的熱食。"],
-        ["Zucchini Pancakes", "櫛瓜煎餅", "pancake 不一定是甜的，也可能是鹹味蔬菜煎餅。"]
+        ["Eggs Toasted: toasted bread, scrambled eggs, bacon, and avocado cream.", "炒蛋吐司：烤麵包、炒蛋、培根與酪梨醬。", "scrambled eggs 是炒蛋；avocado cream 是酪梨醬。"],
+        ["Italian Toast: toasted bread, cherry tomatoes, poached eggs, and eggplant cream.", "義式吐司：烤麵包、小番茄、水波蛋與茄子醬。", "poached eggs 是水波蛋；eggplant cream 是茄子泥狀醬。"],
+        ["Croque Monsieur: French toast with sandwich bread, béchamel, ham, and cheese.", "法式火腿起司三明治：吐司、白醬、火腿與起司。", "béchamel 是白醬，這道通常是熱的鹹味三明治。"],
+        ["Zucchini Pancakes: with Taleggio fondue, poached eggs, and Jerusalem artichoke chips.", "櫛瓜煎餅：塔雷吉歐起司醬、水波蛋與菊芋脆片。", "pancakes 在這裡是鹹食；fondue 表示融化起司醬。"],
+        ["New York New York Bagel: cream cheese, smoked salmon, red onion, caper berries, and salad.", "紐約貝果：奶油起司、煙燻鮭魚、紅洋蔥、酸豆果與沙拉。", "這是完整的冷食系煙燻鮭魚貝果配料。"]
       ]
     },
     {
-      title: "海鮮 / 沙拉 / 前菜",
+      title: "義式前菜與主菜｜完整菜單原文",
       rows: [
-        ["Prawns fried in garlic oil", "蒜油煎蝦", "fried 不一定是裹粉炸，也可能是煎炒。"],
-        ["Burrata with Genovese pesto", "布拉塔起司、熱那亞青醬", "奶香起司加青醬，通常是冷前菜。"],
-        ["grilled squid", "烤魷魚", "grilled 是烤；若後面有 chili sauce，代表可能微辣。"],
-        ["Lobster, tiger prawns, calamari", "龍蝦、虎蝦、魷魚", "一串海鮮名通常是海鮮拼盤或海鮮義大利麵。"],
-        ["clams in mariniere sauce or fried", "蛤蜊，可選白酒海鮮醬或炸的", "or fried 表示可選炸法。"]
+        ["Avocado-Salmon Toast: sourdough toast with avocado cream, marinated salmon, lettuce, carrots, and radishes.", "酪梨鮭魚吐司：酸種吐司、酪梨醬、醃鮭魚、生菜、胡蘿蔔與蘿蔔。", "marinated salmon 是醃漬鮭魚，不一定是熟食。"],
+        ["Dranniki: potato pancakes with sour cream and salmon.", "東歐馬鈴薯煎餅：搭配酸奶油與鮭魚。", "sour cream 是酸奶油；potato pancakes 是鹹味馬鈴薯餅。"],
+        ["Cebureki: fried turnover with mixed pork and beef.", "炸餡餅：內餡是豬牛混合肉。", "fried turnover 是包餡後油炸的麵皮料理。"],
+        ["Charcuterie Board: Culatta, pata negra, mortadella, salami, and burrata.", "冷肉拼盤：Culatta 火腿、黑蹄火腿、義式肉腸、莎樂美與布拉塔起司。", "charcuterie 是冷肉拼盤，通常適合分享。"],
+        ["Sea Bass Turban with fennel salad and Jerusalem artichoke chips.", "海鱸魚捲：搭配茴香沙拉與菊芋脆片。", "fennel 有明顯茴香味；chips 在此指薄脆片。"]
       ]
     },
     {
-      title: "義大利麵 / 披薩 / 主菜",
+      title: "泰式料理｜完整菜單原文",
       rows: [
-        ["gnocchi with basil pesto", "麵疙瘩搭配羅勒青醬", "gnocchi 是馬鈴薯麵疙瘩，pesto 是青醬。"],
-        ["tagliatelle with cream sauce", "寬扁麵搭配奶油醬", "cream sauce 代表口味濃郁。"],
-        ["beef and pork patty", "牛豬肉漢堡排", "patty 是漢堡肉，常見於漢堡或餐盤主菜。"],
-        ["Tomato sauce, mozzarella, mixed seafood", "番茄醬、莫札瑞拉、綜合海鮮", "通常是海鮮披薩。"],
-        ["spicy salami", "辣味臘腸", "代表會辣，常見於 Diavola 披薩。"]
+        ["Pla Hima Yang Kaeng Khiaowan: grilled snow fish in green curry with eggplant and sweet basil leaves.", "綠咖哩烤雪魚：搭配茄子與甜羅勒葉。", "green curry 通常有辣度；sweet basil 是九層塔類香草。"],
+        ["Massaman Kae: lamb massaman with potato, tomato, and coconut milk.", "瑪莎曼羊肉咖哩：羊肉、馬鈴薯、番茄與椰奶。", "massaman 偏香甜濃郁，通常比綠咖哩溫和。"],
+        ["Goong Thod Sauce Makam: crispy prawn with tamarind sauce, fried onion, and fried chili.", "羅望子醬酥炸蝦：搭配炸洋蔥與炸辣椒。", "crispy prawn 表示酥炸；tamarind sauce 帶酸甜味。"],
+        ["Phad Kaprao Nua: wok-fried Australian beef tenderloin with hot basil and chili.", "打拋牛菲力：澳洲牛菲力、打拋葉與辣椒快炒。", "hot basil 和 chili 都提示這道菜可能偏辣。"],
+        ["Pla Neung Manao: steamed sea bass fillet with chili lime sauce and steamed cabbage.", "檸檬蒸海鱸魚：辣椒萊姆醬與蒸高麗菜。", "steamed 是清蒸，但 chili lime sauce 可能酸辣。"]
       ]
     },
     {
-      title: "甜點 / 飲料 / 酒單",
+      title: "海鮮、披薩與西式主菜｜完整菜單原文",
       rows: [
-        ["Panna cotta with berries", "義式奶酪搭配莓果", "常見義式甜點，口感像奶酪。"],
-        ["Chocolate lava cake", "巧克力熔岩蛋糕", "中間通常是流心巧克力。"],
-        ["White Wines", "白酒區", "酒單看到 white wines 就是白酒列表。"],
-        ["Red Wines", "紅酒區", "通常會標杯裝或瓶裝價格。"],
-        ["Aperol Spritz", "阿佩羅氣泡調酒", "歐洲常見餐前酒，偏橘香、微苦甜。"]
+        ["Bouillabaisse: baked sea bass, tiger prawn, scallop, mussel, saffron, and fennel.", "法式海鮮湯：烤海鱸魚、虎蝦、干貝、淡菜、番紅花與茴香。", "同時含多種甲殼與貝類海鮮。"],
+        ["Sea Bass Fillet: pan-seared sea bass, sautéed morning glory, mashed potatoes, and tamarind sauce.", "香煎海鱸魚：炒空心菜、馬鈴薯泥與羅望子醬。", "pan-seared 是平底鍋煎；tamarind sauce 帶酸甜味。"],
+        ["Norwegian Salmon: roasted salmon with Cajun spices, crushed zucchini and potatoes, lemon zest, basil, and tomato-pineapple sauce.", "挪威烤鮭魚：卡郡香料、櫛瓜馬鈴薯泥、檸檬皮、羅勒與番茄鳳梨醬。", "Cajun spices 通常帶香料味與微辣。"],
+        ["Seafood Platter: lobster, tiger prawns, calamari, sea bass, Hokkaido scallops, and grilled Da Lat vegetables.", "海鮮拼盤：龍蝦、虎蝦、魷魚、海鱸魚、北海道干貝與烤大叻蔬菜。", "platter 是拼盤，份量通常適合分享。"],
+        ["Italian Seafood Pizza: prawns, clams, mussels, squid, arugula, and mozzarella.", "義式海鮮披薩：蝦、蛤蜊、淡菜、魷魚、芝麻葉與莫札瑞拉。", "完整配料顯示含多種貝類與起司。"]
+      ]
+    },
+    {
+      title: "西班牙小食與甜點｜完整菜單原文",
+      rows: [
+        ["Gioiella Burrata with Genovese pesto and cherry tomatoes.", "布拉塔起司搭配熱那亞青醬與小番茄。", "pesto 通常含羅勒、起司與堅果。"],
+        ["Cured ham croquettes with fresh Latxa sheep's milk from the Ultzama Valley.", "熟成火腿可樂餅，使用 Ultzama 山谷的新鮮 Latxa 羊奶。", "croquettes 是裹粉油炸的小點，內含火腿與羊奶。"],
+        ["Andalusian-style calamari with Ibarra green chili emulsion.", "安達魯西亞式魷魚，搭配 Ibarra 青辣椒乳化醬。", "calamari 是魷魚；green chili emulsion 可能微辣。"],
+        ["Rías Gallegas cockles, charcoal-grilled or fried.", "加利西亞鳥蛤，可選炭烤或油炸。", "or 表示二選一，點餐時需說 grilled 或 fried。"],
+        ["Cambados clams in marinière sauce or fried.", "Cambados 蛤蜊，可選白酒海鮮醬煮或油炸。", "marinière sauce 通常含白酒、奶油或香草。"]
       ]
     }
   ],
