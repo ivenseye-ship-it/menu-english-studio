@@ -19,14 +19,51 @@ function writeJson(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
-function speak(text) {
+let voicesReady;
+
+function loadVoices() {
+  const available = window.speechSynthesis.getVoices();
+  if (available.length) return Promise.resolve(available);
+  if (voicesReady) return voicesReady;
+
+  voicesReady = new Promise(resolve => {
+    const finish = () => {
+      window.speechSynthesis.removeEventListener("voiceschanged", finish);
+      resolve(window.speechSynthesis.getVoices());
+    };
+    window.speechSynthesis.addEventListener("voiceschanged", finish, { once: true });
+    window.setTimeout(finish, 1200);
+  });
+  return voicesReady;
+}
+
+function chooseEnglishVoice(voices) {
+  const english = voices.filter(voice => /^en[-_]/i.test(voice.lang));
+  const preferredNames = ["Samantha", "Ava", "Evan", "Daniel", "Karen", "Google US English"];
+  return preferredNames
+    .map(name => english.find(voice => voice.name.includes(name)))
+    .find(Boolean)
+    || english.find(voice => /^en-US$/i.test(voice.lang) && voice.localService)
+    || english.find(voice => /^en-US$/i.test(voice.lang))
+    || english[0]
+    || null;
+}
+
+async function speak(text) {
   if (!("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "en-US";
+  const cleanText = text.replace(/\s+/g, " ").trim();
+  if (!cleanText) return;
+
+  const voices = await loadVoices();
+  const voice = chooseEnglishVoice(voices);
+  const utterance = new SpeechSynthesisUtterance(cleanText);
+  utterance.voice = voice;
+  utterance.lang = voice?.lang || "en-US";
   utterance.rate = 0.5;
   utterance.pitch = 1;
-  window.speechSynthesis.speak(utterance);
+
+  window.speechSynthesis.cancel();
+  window.setTimeout(() => window.speechSynthesis.speak(utterance), 80);
 }
 
 function renderProgress() {
