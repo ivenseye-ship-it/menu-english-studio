@@ -64,7 +64,7 @@ async function speak(text) {
     const value = part.trim();
     if (!value) return;
     if (value === "/" || value === ",") {
-      if (segments.length) segments[segments.length - 1].pauseAfter = value === "/" ? 1500 : 1000;
+      if (segments.length) segments[segments.length - 1].pauseAfter = 1500;
       return;
     }
     segments.push({ text: value, pauseAfter: 0 });
