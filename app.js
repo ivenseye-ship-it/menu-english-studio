@@ -20,6 +20,7 @@ function writeJson(key, value) {
 }
 
 let voicesReady;
+let speechRunId = 0;
 
 function loadVoices() {
   const available = window.speechSynthesis.getVoices();
@@ -54,16 +55,29 @@ async function speak(text) {
   const cleanText = text.replace(/\s+/g, " ").trim();
   if (!cleanText) return;
 
+  const runId = ++speechRunId;
   const voices = await loadVoices();
+  if (runId !== speechRunId) return;
   const voice = chooseEnglishVoice(voices);
-  const utterance = new SpeechSynthesisUtterance(cleanText);
-  utterance.voice = voice;
-  utterance.lang = voice?.lang || "en-US";
-  utterance.rate = 0.72;
-  utterance.pitch = 1;
-
+  const segments = cleanText.split(/\s*\/\s*/).filter(Boolean);
   window.speechSynthesis.cancel();
-  window.setTimeout(() => window.speechSynthesis.speak(utterance), 80);
+
+  const playSegment = index => {
+    if (runId !== speechRunId || index >= segments.length) return;
+    const utterance = new SpeechSynthesisUtterance(segments[index]);
+    utterance.voice = voice;
+    utterance.lang = voice?.lang || "en-US";
+    utterance.rate = 0.65;
+    utterance.pitch = 1;
+    utterance.onend = () => {
+      if (index + 1 < segments.length) {
+        window.setTimeout(() => playSegment(index + 1), 1500);
+      }
+    };
+    window.speechSynthesis.speak(utterance);
+  };
+
+  window.setTimeout(() => playSegment(0), 80);
 }
 
 function renderProgress() {
