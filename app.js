@@ -59,19 +59,28 @@ async function speak(text) {
   const voices = await loadVoices();
   if (runId !== speechRunId) return;
   const voice = chooseEnglishVoice(voices);
-  const segments = cleanText.split(/\s*\/\s*/).filter(Boolean);
+  const segments = [];
+  cleanText.split(/([/,])/).forEach(part => {
+    const value = part.trim();
+    if (!value) return;
+    if (value === "/" || value === ",") {
+      if (segments.length) segments[segments.length - 1].pauseAfter = value === "/" ? 1500 : 1000;
+      return;
+    }
+    segments.push({ text: value, pauseAfter: 0 });
+  });
   window.speechSynthesis.cancel();
 
   const playSegment = index => {
     if (runId !== speechRunId || index >= segments.length) return;
-    const utterance = new SpeechSynthesisUtterance(segments[index]);
+    const utterance = new SpeechSynthesisUtterance(segments[index].text);
     utterance.voice = voice;
     utterance.lang = voice?.lang || "en-US";
     utterance.rate = 0.65;
     utterance.pitch = 1;
     utterance.onend = () => {
       if (index + 1 < segments.length) {
-        window.setTimeout(() => playSegment(index + 1), 1500);
+        window.setTimeout(() => playSegment(index + 1), segments[index].pauseAfter);
       }
     };
     window.speechSynthesis.speak(utterance);
