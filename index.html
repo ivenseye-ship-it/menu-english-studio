@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu English Studio</title>
+  <meta name="description" content="12月歐洲行英文學習網站：菜單閱讀、點餐句型、KK音標、每週課程與瀏覽器發音練習。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="回到首頁">
+      <span class="brand-mark">ME</span>
+      <span>Menu English Studio</span>
+    </a>
+    <nav class="top-nav" aria-label="主要導覽">
+      <a href="#course">課程</a>
+      <a href="#menu-lab">菜單解讀</a>
+      <a href="#vocab">單字庫</a>
+      <a href="#speaking">口說</a>
+      <a href="#practice">練習</a>
+      <a href="#notes">擴充</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">For December Europe Trip</p>
+        <h1>把英文菜單變成你看得懂的旅行地圖。</h1>
+        <p>依據你搜集的菜單與旅行英文資料，整理成每週課程、實際菜單拆解、KK 音標、句型跟讀和日常練習。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#course">開始本週課程</a>
+          <button class="button soft" type="button" data-speak="A table for two, please. I would like the grilled sea bass. Could we have the bill, please?">試聽點餐英文</button>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/menu-hero.jpg" alt="歐洲餐廳英文菜單照片">
+        <figcaption>以你搜集的真實菜單內容為核心練習素材</figcaption>
+      </figure>
+    </section>
+
+    <section class="overview" aria-label="學習摘要">
+      <article>
+        <span>4</span>
+        <p>週旅行英文課程</p>
+      </article>
+      <article>
+        <span>7</span>
+        <p>菜單主題單字庫</p>
+      </article>
+      <article>
+        <span>20+</span>
+        <p>真實菜單例句拆解</p>
+      </article>
+      <article>
+        <span>Web</span>
+        <p>直接在網頁閱讀與跟讀</p>
+      </article>
+    </section>
+
+    <section id="course" class="section course-section">
+      <div class="section-heading">
+        <p class="eyebrow">Course Path</p>
+        <h2>每週課程路線</h2>
+        <p>四週完成菜單單字、真實菜單、點餐口說與旅行實戰。點選任一週，就會直接前往該週的學習內容。</p>
+      </div>
+      <div class="course-layout">
+        <aside class="course-rail">
+          <div class="progress-card">
+            <span id="progressText">0 / 4</span>
+            <div class="progress-track"><div id="progressBar"></div></div>
+            <button id="resetProgress" class="text-button" type="button">重設進度</button>
+          </div>
+          <div class="image-stack" aria-hidden="true">
+            <img src="assets/cooking.jpg" alt="">
+            <img src="assets/seafood.jpg" alt="">
+            <img src="assets/transport.jpg" alt="">
+          </div>
+        </aside>
+        <div id="courseList" class="course-list"></div>
+      </div>
+    </section>
+
+    <section id="menu-lab" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Menu Lab</p>
+        <h2>實際菜單解讀</h2>
+        <p>用「菜單原文 → 中文拆解 → 點餐判斷」練習，不再只是背單字，而是看懂你眼前那一道菜。</p>
+      </div>
+      <div id="exampleBoard" class="example-board"></div>
+    </section>
+
+    <section id="vocab" class="section vocab-section">
+      <div class="section-heading row">
+        <div>
+          <p class="eyebrow">Vocabulary</p>
+          <h2>單字庫與 KK 音標</h2>
+          <p>搜尋英文、中文或 KK 音標。每張卡片都可直接聽發音。</p>
+        </div>
+        <label class="search-box">
+          <span>搜尋</span>
+          <input id="vocabSearch" type="search" placeholder="salmon、烤、pesto">
+        </label>
+      </div>
+      <div id="categoryTabs" class="tabs" role="tablist"></div>
+      <div id="vocabGrid" class="vocab-grid"></div>
+    </section>
+
+    <section id="speaking" class="section speaking-section">
+      <div class="section-heading">
+        <p class="eyebrow">Speaking Studio</p>
+        <h2>餐廳與旅行口說</h2>
+        <p>把常用句拆成餐廳、確認食材、結帳與旅行三組，反覆跟讀到能自然說出口。</p>
+      </div>
+      <div id="phraseDeck" class="phrase-deck"></div>
+    </section>
+
+    <section id="practice" class="section practice-section">
+      <div class="section-heading">
+        <p class="eyebrow">Daily Practice</p>
+        <h2>今天的 10 分鐘練習</h2>
+        <p>每天不用多，照三步驟做：聽、看、說。旅行時真正派上用場的是反覆練過的句子。</p>
+      </div>
+      <div class="practice-grid">
+        <article>
+          <span>1</span>
+          <h3>聽 3 句</h3>
+          <p>播放任一口說卡，先聽語調，不急著記全部單字。</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>拆 1 道菜</h3>
+          <p>到菜單解讀區，選一道菜，判斷它是海鮮、肉類、醬料或烹飪方式。</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>說 1 次完整點餐</h3>
+          <p>用「I would like...」加上一道菜名，練成真正能出口的句子。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="notes" class="section notes-section">
+      <div class="section-heading">
+        <p class="eyebrow">Expansion Space</p>
+        <h2>我的擴充筆記</h2>
+        <p>之後遇到新菜單、新城市、新句型，可以直接加進來。這是預留給下一階段內容擴充的位置。</p>
+      </div>
+      <div class="notes-layout">
+        <form id="noteForm" class="note-form">
+          <label>
+            主題
+            <input name="title" required placeholder="例如：巴黎咖啡館">
+          </label>
+          <label>
+            學習內容
+            <textarea name="body" required placeholder="新增菜名、句型、中文理解或提醒"></textarea>
+          </label>
+          <button class="button primary" type="submit">新增筆記</button>
+        </form>
+        <div id="noteCards" class="note-cards"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Menu English Studio · 靜態網站架構，可部署到 GitHub Pages、Netlify、Vercel 或一般網站空間。</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
