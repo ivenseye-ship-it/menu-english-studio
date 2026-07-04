@@ -5,6 +5,67 @@ const notesKey = "menuEnglishNotes";
 let activeCategory = data.vocabulary[0].id;
 let activeExamplePage = 0;
 
+const foreignMenuTerms = new Map([
+  ["Croque Monsieur", "法式火腿起司烤三明治"], ["béchamel", "法式白醬"],
+  ["ciabatta", "義大利巧巴達麵包"], ["hollandaise", "荷蘭醬"],
+  ["guacamole", "墨西哥酪梨醬"], ["jalapeños", "墨西哥辣椒"],
+  ["pico de gallo", "墨西哥番茄莎莎"], ["Tajín", "墨西哥塔辛香料"],
+  ["Huevos Rancheros", "墨西哥牧場蛋"], ["Shakshuka", "北非番茄燉蛋"],
+  ["Syrniki", "東歐起司煎餅"], ["Crudité", "法式生鮮冷盤"],
+  ["Linguine Mancini", "Mancini 品牌扁麵"], ["Spaghetti Mancini", "Mancini 品牌義大利直麵"],
+  ["bottarga", "義大利烏魚子"], ["stracciatella", "義大利絲綢起司"],
+  ["Ossobuco", "義式燉小牛膝"], ["Fontina", "義大利芳提娜起司"],
+  ["focaccia", "義大利佛卡夏麵包"], ["Parmigiano Reggiano", "義大利帕瑪森起司"],
+  ["Niçoise", "法式尼斯風味"], ["velouté", "法式滑順濃湯"],
+  ["Bouillabaisse", "法式海鮮湯"], ["Crème Brûlée", "法式烤布蕾"],
+  ["Tiramisu", "義大利提拉米蘇"], ["Amaretto", "義大利杏仁利口酒"],
+  ["mascarpone", "義大利馬斯卡彭起司"], ["Margherita", "義式瑪格麗特"],
+  ["Gaeng Kati Puu Gub Bai Cha Plu", "泰式蒌葉紅咖哩蟹肉"],
+  ["Gaeng Phed Ped Yang", "泰式紅咖哩烤鴨"], ["Goong Sarong Buer Tod", "泰式金絲炸蝦"],
+  ["Yum Neu Yang", "泰式烤牛肉沙拉"], ["Muek Kratiem Prik Thai", "泰式蒜香胡椒魷魚"],
+  ["Plar Goong Yang", "泰式烤蝦沙拉"], ["Massaman Nua", "泰式瑪莎曼牛肉咖哩"],
+  ["Pla Sam Rod", "泰式三味魚"], ["Pu Nim Pat Phong Kra Ri", "泰式黃咖哩軟殼蟹"],
+  ["Hmoo Ob Nahm Phueng", "泰式蜂蜜烤豬肋排"], ["Nue Yang Chim Chaeo", "泰式烤牛肉配酸辣醬"],
+  ["Yum Pla Salmon", "泰式鮭魚沙拉"], ["Larb Gai Thod", "泰式炸雞肉拉帕"],
+  ["Yum Ped Nahm Tok", "泰式酸辣烤鴨沙拉"], ["Yum Ma Kuea Yaw Nue Poo", "泰式蟹肉炙燒長茄"],
+  ["Po Pia Pak", "泰式蔬菜春捲"], ["Som Tum Puu Nim", "泰式軟殼蟹青木瓜沙拉"],
+  ["Tod Man Khaopod", "泰式炸玉米餅"], ["Kluay Tod", "泰式炸香蕉"],
+  ["Tub Tim Siam", "泰式紅寶石甜品"], ["pâté en croûte", "法式酥皮肉派"],
+  ["Donostiarra", "西班牙聖塞巴斯提安風味"], ["piparra", "巴斯克青辣椒"],
+  ["empanada", "西班牙包餡麵點"], ["scamorza", "義大利斯卡莫札起司"],
+  ["salchichón", "西班牙熟成香腸"], ["sobrasada", "西班牙可抹式豬肉腸"],
+  ["rillettes", "法式慢煮肉醬"], ["Gilda", "巴斯克鯷魚辣椒串"],
+  ["pincho", "西班牙一口小食"], ["Piquillo", "西班牙皮奎洛紅椒"],
+  ["romesco", "西班牙堅果紅椒醬"], ["Patatas bravas", "西班牙辣味馬鈴薯"],
+  ["aioli", "蒜味美乃滋"], ["marinière", "法式白酒海鮮醬"],
+  ["Il Tricolore", "義大利三色"], ["pesto", "義大利羅勒青醬"]
+]);
+
+const foreignTermPattern = new RegExp(
+  [...foreignMenuTerms.keys()]
+    .sort((a, b) => b.length - a.length)
+    .map(term => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("|"),
+  "giu"
+);
+
+function escapeHtml(value) {
+  const element = document.createElement("span");
+  element.textContent = value;
+  return element.innerHTML;
+}
+
+function annotateForeignTerms(text) {
+  const meanings = new Map();
+  const html = escapeHtml(text).replace(foreignTermPattern, match => {
+    const entry = [...foreignMenuTerms].find(([term]) => term.toLocaleLowerCase() === match.toLocaleLowerCase());
+    if (!entry) return match;
+    meanings.set(entry[0], entry[1]);
+    return `<span class="foreign-term" title="${entry[1]}">${match}</span>`;
+  });
+  return { html, meanings: [...meanings] };
+}
+
 const qs = (selector, root = document) => root.querySelector(selector);
 const qsa = (selector, root = document) => [...root.querySelectorAll(selector)];
 
@@ -77,7 +138,7 @@ async function speak(text) {
     const utterance = new SpeechSynthesisUtterance(segments[index].text);
     utterance.voice = voice;
     utterance.lang = voice?.lang || "en-US";
-    utterance.rate = 0.65;
+    utterance.rate = 0.585;
     utterance.pitch = 1;
     utterance.onend = () => {
       if (index + 1 < segments.length) {
@@ -151,16 +212,22 @@ function renderExamples() {
     <article class="menu-group">
       <h3>${group.title}</h3>
       <div class="menu-example-list">
-        ${group.rows.map(row => `
+        ${group.rows.map(row => {
+          const annotated = annotateForeignTerms(row[0]);
+          const glossary = annotated.meanings.length
+            ? `<span class="foreign-note">非英文詞：${annotated.meanings.map(([term, meaning]) => `${term}＝${meaning}`).join("；")}</span>`
+            : "";
+          return `
           <div class="menu-example">
             <div>
-              <p class="menu-original">${row[0]}</p>
+              <p class="menu-original">${annotated.html}</p>
               <p class="menu-zh">${row[1]}</p>
             </div>
-            <p>${row[2]}</p>
+            <p>${row[2]}${glossary}</p>
             <button class="audio-button" type="button" data-speak="${row[0]}">播放</button>
           </div>
-        `).join("")}
+        `;
+        }).join("")}
       </div>
     </article>
   `;

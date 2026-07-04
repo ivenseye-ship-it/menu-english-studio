@@ -524,6 +524,21 @@ main {
   line-height: 1.35;
 }
 
+.foreign-term {
+  text-decoration-line: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.foreign-note {
+  display: block;
+  margin-top: 6px;
+  color: #005bb5;
+  font-size: 13px;
+  font-weight: 650;
+}
+
 .menu-zh,
 .menu-example > p,
 .phrase-row span,
