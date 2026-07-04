@@ -165,41 +165,26 @@ function renderExamples() {
     </article>
   `;
 
-  const pagination = `
-    <button class="pagination-arrow" type="button" data-example-page="prev"
-      aria-label="上一頁" title="上一頁" ${activeExamplePage === 0 ? "disabled" : ""}>←</button>
-    <label class="pagination-select">
-      <span>菜單分類</span>
-      <select data-example-select aria-label="選擇菜單分類">
-        ${data.examples.map((item, index) => `
-          <option value="${index}" ${index === activeExamplePage ? "selected" : ""}>
-            ${index + 1}. ${item.title.replace("｜完整菜單原文", "").replace("｜加強例句", "")}
-          </option>
-        `).join("")}
-      </select>
-    </label>
-    <span class="pagination-status">${activeExamplePage + 1} / ${data.examples.length}</span>
-    <button class="pagination-arrow" type="button" data-example-page="next"
-      aria-label="下一頁" title="下一頁" ${activeExamplePage === data.examples.length - 1 ? "disabled" : ""}>→</button>
+  qs("#examplePaginationTop").innerHTML = `
+    <div class="menu-category-list" role="tablist" aria-label="菜單分類">
+      ${data.examples.map((item, index) => {
+        const label = item.title.replace("｜完整菜單原文", "").replace("｜加強例句", "");
+        return `
+          <button class="menu-category-button ${index === activeExamplePage ? "active" : ""}"
+            type="button" role="tab" aria-selected="${index === activeExamplePage}"
+            data-example-category="${index}">
+            <span>${index + 1}</span>${label}
+          </button>
+        `;
+      }).join("")}
+    </div>
   `;
 
-  [qs("#examplePaginationTop"), qs("#examplePaginationBottom")].forEach(container => {
-    container.innerHTML = pagination;
-  });
-
-  qsa("[data-example-page]").forEach(button => {
+  qsa("[data-example-category]").forEach(button => {
     button.addEventListener("click", () => {
-      activeExamplePage += button.dataset.examplePage === "next" ? 1 : -1;
+      activeExamplePage = Number(button.dataset.exampleCategory);
       renderExamples();
-      qs("#menu-lab").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-
-  qsa("[data-example-select]").forEach(select => {
-    select.addEventListener("change", () => {
-      activeExamplePage = Number(select.value);
-      renderExamples();
-      qs("#menu-lab").scrollIntoView({ behavior: "smooth", block: "start" });
+      qs("#exampleBoard").scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 }
