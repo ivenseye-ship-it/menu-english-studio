@@ -439,8 +439,74 @@ main {
 
 .example-board {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.menu-pagination {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 18px;
+}
+
+.menu-pagination.bottom {
+  margin: 18px 0 0;
+}
+
+.pagination-arrow {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.pagination-arrow:hover:not(:disabled) {
+  color: #fff;
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+.pagination-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.pagination-select {
+  width: min(440px, 100%);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pagination-select select {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 34px 0 12px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+}
+
+.pagination-status {
+  min-width: 50px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .menu-group {
@@ -802,6 +868,23 @@ main {
 
   .menu-example {
     grid-template-columns: 1fr;
+  }
+
+  .menu-pagination {
+    gap: 8px;
+  }
+
+  .pagination-select {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pagination-select > span {
+    display: none;
+  }
+
+  .pagination-status {
+    min-width: 42px;
+    font-size: 13px;
   }
 
   .phrase-row {
