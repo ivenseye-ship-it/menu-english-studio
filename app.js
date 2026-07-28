@@ -310,6 +310,31 @@ function renderPhrases() {
   `).join("");
 }
 
+function renderWine() {
+  qs("#wineDeck").innerHTML = data.wine.map(group => `
+    <article class="wine-group">
+      <div class="wine-group-heading">
+        <span class="tag">${group.tag}</span>
+        <h3>${group.title}</h3>
+      </div>
+      <div class="wine-items">
+        ${group.items.map(item => {
+          const [en, kk, zh] = item;
+          return `
+            <div class="wine-item">
+              <div>
+                <p>${en}</p>
+                <span class="wine-detail">[${kk}] · ${zh}</span>
+              </div>
+              <button class="audio-button" type="button" data-speak="${en}">播放</button>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    </article>
+  `).join("");
+}
+
 function renderNotes() {
   const notes = readJson(notesKey, []);
   qs("#noteCards").innerHTML = notes.length
@@ -382,6 +407,7 @@ function init() {
   renderTabs();
   renderVocabulary();
   renderPhrases();
+  renderWine();
   renderNotes();
   bindEvents();
 }

@@ -683,6 +683,51 @@ main {
   line-height: 1.35;
 }
 
+.wine-deck {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.wine-group {
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 26px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(250, 245, 242, 0.86));
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.06);
+}
+
+.wine-group h3 {
+  margin: 0;
+  font-size: 23px;
+  line-height: 1.18;
+}
+
+.wine-items {
+  margin-top: 14px;
+}
+
+.wine-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.wine-item p {
+  margin: 0 0 5px;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.wine-detail {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .practice-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -805,7 +850,8 @@ main {
   .example-board,
   .vocab-grid,
   .phrase-deck,
-  .practice-grid {
+  .practice-grid,
+  .wine-deck {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -854,6 +900,7 @@ main {
   .vocab-grid,
   .phrase-deck,
   .practice-grid,
+  .wine-deck,
   .note-cards {
     grid-template-columns: 1fr;
   }
@@ -877,6 +924,11 @@ main {
   }
 
   .phrase-row {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .wine-item {
     align-items: start;
     flex-direction: column;
   }

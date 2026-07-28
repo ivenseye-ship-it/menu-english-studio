@@ -93,6 +93,57 @@ window.LEARNING_DATA = {
         ["sparkling wine / champagne", "ˈspɑrklɪŋ waɪn / ʃæmˈpen", "氣泡酒 / 香檳"],
         ["cocktail / cider", "ˈkɑkˌtel / ˈsaɪdɚ", "雞尾酒 / 蘋果酒"]
       ]
+    },
+    {
+      id: "wine",
+      label: "Wine 酒類",
+      items: [
+        ["red wine / white wine", "rɛd waɪn / hwaɪt waɪn", "紅酒 / 白酒"],
+        ["rosé / sparkling wine", "roʊˈzeɪ / ˈspɑrklɪŋ waɪn", "粉紅酒 / 氣泡酒"],
+        ["champagne / house wine", "ʃæmˈpeɪn / haʊs waɪn", "香檳 / 店酒"],
+        ["wine list / by the glass", "waɪn lɪst / baɪ ðə glæs", "酒單 / 單杯供應"],
+        ["dry / sweet / crisp", "draɪ / swit / krɪsp", "不甜 / 甜 / 清爽"],
+        ["light-bodied / full-bodied", "laɪt ˈbɑdid / fʊl ˈbɑdid", "酒體輕 / 酒體厚重"],
+        ["Cabernet Sauvignon / Merlot", "ˌkæbərˈneɪ soʊvɪnˈjoʊn / ˈmɝloʊ", "卡本內蘇維濃 / 梅洛"],
+        ["Chardonnay / Riesling", "ˌʃɑrdənˈeɪ / ˈrizlɪŋ", "夏多內 / 麗絲玲"]
+      ]
+    }
+  ],
+  wine: [
+    {
+      tag: "Start here",
+      title: "酒單基本分類",
+      items: [
+        ["red wine", "rɛd waɪn", "紅酒"],
+        ["white wine", "hwaɪt waɪn", "白酒"],
+        ["rosé", "roʊˈzeɪ", "粉紅酒"],
+        ["sparkling wine", "ˈspɑrklɪŋ waɪn", "氣泡酒"],
+        ["house wine", "haʊs waɪn", "店酒"],
+        ["by the glass / bottle", "baɪ ðə glæs / ˈbɑtəl", "單杯 / 一瓶"]
+      ]
+    },
+    {
+      tag: "Describe it",
+      title: "酒單常見形容詞",
+      items: [
+        ["dry", "draɪ", "不甜、乾型"],
+        ["sweet", "swit", "甜"],
+        ["crisp", "krɪsp", "清爽"],
+        ["fruity", "ˈfruti", "果香明顯"],
+        ["light-bodied", "laɪt ˈbɑdid", "酒體輕"],
+        ["full-bodied", "fʊl ˈbɑdid", "酒體厚重"]
+      ]
+    },
+    {
+      tag: "Order with confidence",
+      title: "實用點酒句型",
+      items: [
+        ["Could I see the wine list, please?", "kʊd aɪ si ðə waɪn lɪst pliz", "可以給我酒單嗎？"],
+        ["Do you have wine by the glass?", "du ju hæv waɪn baɪ ðə glæs", "有單杯酒嗎？"],
+        ["What would you recommend with seafood?", "wʌt wʊd ju ˌrɛkəˈmɛnd wɪð ˈsifud", "搭配海鮮你推薦什麼？"],
+        ["Is it sweet or dry?", "ɪz ɪt swit ɔr draɪ", "它是甜的還是不甜的？"],
+        ["Just one glass, please.", "dʒʌst wʌn glæs pliz", "一杯就好，謝謝。"]
+      ]
     }
   ],
   examples: [
