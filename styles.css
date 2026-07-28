@@ -703,6 +703,13 @@ main {
   line-height: 1.18;
 }
 
+.wine-group-description {
+  margin: 9px 0 0;
+  color: #515154;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 .wine-items {
   margin-top: 14px;
 }
@@ -726,6 +733,14 @@ main {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
+}
+
+.wine-info {
+  display: block;
+  margin-top: 5px;
+  color: #424245;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .practice-grid {

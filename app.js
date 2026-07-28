@@ -329,10 +329,11 @@ function renderWine() {
       <div class="wine-group-heading">
         <span class="tag">${group.tag}</span>
         <h3>${group.title}</h3>
+        ${group.description ? `<p class="wine-group-description">${group.description}</p>` : ""}
       </div>
       <div class="wine-items">
         ${group.items.map(item => {
-          const [en, kk, zh] = item;
+          const [en, kk, zh, info] = item;
           const annotated = annotateForeignTerms(en);
           const glossary = annotated.meanings.length
             ? `<span class="foreign-note">非英文詞：${annotated.meanings.map(([term, meaning]) => `${term}＝${meaning}`).join("；")}</span>`
@@ -342,6 +343,7 @@ function renderWine() {
               <div>
                 <p>${annotated.html}</p>
                 <span class="wine-detail">[${kk}] · ${zh}</span>
+                ${info ? `<span class="wine-info">${info}</span>` : ""}
                 ${glossary}
               </div>
               <button class="audio-button" type="button" data-speak="${en}">播放</button>

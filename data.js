@@ -125,50 +125,53 @@ window.LEARNING_DATA = {
     {
       tag: "Red wine regions",
       title: "紅酒主要國家與產區",
+      description: "先記住產區的整體個性，不需要背年份或酒莊。",
       items: [
-        ["Bordeaux", "bɔrˈdoʊ", "法國｜波爾多"],
-        ["Burgundy", "ˈbɝgəndi", "法國｜勃根地"],
-        ["Rhône", "roʊn", "法國｜隆河"],
-        ["Tuscany", "ˈtʌskəni", "義大利｜托斯卡尼"],
-        ["Piedmont", "ˈpidˌmɑnt", "義大利｜皮埃蒙特"],
-        ["Rioja", "riˈoʊhə", "西班牙｜里奧哈"],
-        ["Douro", "ˈdʊroʊ", "葡萄牙｜杜羅"],
-        ["Pfalz", "fɑlts", "德國｜法爾茲"],
-        ["Burgenland", "ˈbʊrgənˌlænd", "奧地利｜布爾根蘭"],
-        ["California / Chile / Australia", "ˌkæləˈfɔrnjə / ˈtʃɪli / ɔˈstreɪljə", "新世界｜加州 / 智利 / 澳洲"]
+        ["Bordeaux", "bɔrˈdoʊ", "法國｜波爾多", "常見 Cabernet Sauvignon、Merlot；酒體通常較有結構，帶黑色水果與橡木氣息。"],
+        ["Burgundy", "ˈbɝgəndi", "法國｜勃根地", "以 Pinot Noir 為代表；風格細緻，常見紅櫻桃、莓果與泥土氣息。"],
+        ["Rhône", "roʊn", "法國｜隆河", "北隆河常見 Syrah，南隆河常見 Grenache；可有黑莓、香料與胡椒風味。"],
+        ["Tuscany", "ˈtʌskəni", "義大利｜托斯卡尼", "以 Sangiovese 為主；酸度較明顯，常見櫻桃、香草與乾燥草本。"],
+        ["Piedmont", "ˈpidˌmɑnt", "義大利｜皮埃蒙特", "以 Nebbiolo 為代表；香氣優雅，常有紅莓、玫瑰與較明顯單寧。"],
+        ["Rioja", "riˈoʊhə", "西班牙｜里奧哈", "以 Tempranillo 為主；常見紅莓、香草、皮革與橡木桶氣息。"],
+        ["Douro", "ˈdʊroʊ", "葡萄牙｜杜羅", "氣候較炎熱，紅酒通常果味濃、酒體飽滿，也常帶香料感。"],
+        ["Pfalz", "fɑlts", "德國｜法爾茲", "日照較充足；紅酒可較成熟圓潤，白酒則常有果香與清爽酸度。"],
+        ["Burgenland", "ˈbʊrgənˌlænd", "奧地利｜布爾根蘭", "溫暖產區；紅酒常有成熟莓果，甜酒也很有代表性。"],
+        ["California / Chile / Australia", "ˌkæləˈfɔrnjə / ˈtʃɪli / ɔˈstreɪljə", "新世界｜加州 / 智利 / 澳洲", "通常果味直接、容易理解；炎熱地區的酒常較成熟、飽滿。"]
       ]
     },
     {
       tag: "White wine regions",
       title: "白酒主要國家與產區",
+      description: "白酒可以先用「清爽酸、果香或礦物感」來理解。",
       items: [
-        ["Loire", "lwɑr", "法國｜羅亞爾"],
-        ["Alsace", "ælˈsæs", "法國｜阿爾薩斯"],
-        ["Chablis", "ʃæˈbli", "法國｜夏布利"],
-        ["Veneto", "ˈvɛnətoʊ", "義大利｜威尼托"],
-        ["Alto Adige", "ˈæltoʊ ˈɑdɪdʒeɪ", "義大利｜上阿迪傑"],
-        ["Rías Baixas", "ˈriːəs ˈbaɪʃəs", "西班牙｜下海灣"],
-        ["Vinho Verde", "ˈvinjoʊ ˈvɛrdeɪ", "葡萄牙｜綠酒"],
-        ["Mosel / Rheingau", "ˈmoʊzəl / ˈraɪngaʊ", "德國｜摩澤爾 / 萊茵高"],
-        ["Wachau", "ˈvɑkaʊ", "奧地利｜瓦豪"],
-        ["New Zealand / South Africa", "nu ˈzilənd / saʊθ ˈæfrɪkə", "新世界｜紐西蘭 / 南非"]
+        ["Loire", "lwɑr", "法國｜羅亞爾", "常見 Sauvignon Blanc、Chenin Blanc；酸度清爽，可能有柑橘、青草或礦物感。"],
+        ["Alsace", "ælˈsæs", "法國｜阿爾薩斯", "以 Riesling、Gewürztraminer 著名；花香與果香明顯，從乾型到甜型都有。"],
+        ["Chablis", "ʃæˈbli", "法國｜夏布利", "以 Chardonnay 為主；通常不以濃厚橡木為主，酸度清脆，帶檸檬與礦物感。"],
+        ["Veneto", "ˈvɛnətoʊ", "義大利｜威尼托", "常見 Pinot Grigio、Soave；風格清爽，適合海鮮與開胃菜。"],
+        ["Alto Adige", "ˈæltoʊ ˈɑdɪdʒeɪ", "義大利｜上阿迪傑", "高海拔氣候讓白酒保有酸度，常見蘋果、梨子與花香。"],
+        ["Rías Baixas", "ˈriːəs ˈbaɪʃəs", "西班牙｜下海灣", "以 Albariño 為主；柑橘、桃子與海風般的清爽感，常搭配海鮮。"],
+        ["Vinho Verde", "ˈvinjoʊ ˈvɛrdeɪ", "葡萄牙｜綠酒", "酒體輕、酸度明亮，常有柑橘與微微氣泡感，適合夏天飲用。"],
+        ["Mosel / Rheingau", "ˈmoʊzəl / ˈraɪngaʊ", "德國｜摩澤爾 / 萊茵高", "以 Riesling 為主；香氣細緻，酸度高，可有青蘋果、桃子與礦物感。"],
+        ["Wachau", "ˈvɑkaʊ", "奧地利｜瓦豪", "以 Grüner Veltliner、Riesling 為主；清爽、乾淨，常帶柑橘與白胡椒。"],
+        ["New Zealand / South Africa", "nu ˈzilənd / saʊθ ˈæfrɪkə", "新世界｜紐西蘭 / 南非", "紐西蘭 Sauvignon Blanc 常有青草與熱帶水果；南非白酒常兼具果香與礦物感。"]
       ]
     },
     {
       tag: "Grape varieties",
       title: "常見葡萄品種",
+      description: "同一品種會因氣候、產區與釀造方式不同而改變，以下是酒單上常見的方向。",
       items: [
-        ["Cabernet Sauvignon", "ˌkæbərˈneɪ soʊvɪnˈjoʊn", "紅葡萄｜卡本內蘇維濃"],
-        ["Merlot", "ˈmɝloʊ", "紅葡萄｜梅洛"],
-        ["Pinot Noir", "ˈpinoʊ nwɑr", "紅葡萄｜黑皮諾"],
-        ["Syrah", "sɪˈrɑ", "紅葡萄｜希哈"],
-        ["Sangiovese", "ˌsændʒoʊˈveɪzeɪ", "紅葡萄｜桑嬌維塞"],
-        ["Tempranillo", "ˌtɛmprəˈniːjoʊ", "紅葡萄｜添帕尼優"],
-        ["Chardonnay", "ˌʃɑrdənˈeɪ", "白葡萄｜夏多內"],
-        ["Sauvignon Blanc", "ˌsoʊvɪnˈjoʊn blɑŋk", "白葡萄｜白蘇維濃"],
-        ["Riesling", "ˈrizlɪŋ", "白葡萄｜麗絲玲"],
-        ["Pinot Grigio", "ˈpinoʊ ˈgridʒioʊ", "白葡萄｜灰皮諾"],
-        ["Grüner Veltliner", "ˈgruːnər ˈvɛltlinər", "白葡萄｜綠維特利納"]
+        ["Cabernet Sauvignon", "ˌkæbərˈneɪ soʊvɪnˈjoʊn", "紅葡萄｜卡本內蘇維濃", "黑醋栗、黑莓、薄荷；單寧與酒體通常較明顯，適合牛排。"],
+        ["Merlot", "ˈmɝloʊ", "紅葡萄｜梅洛", "李子、黑櫻桃與巧克力；口感通常較柔順，容易入口。"],
+        ["Pinot Noir", "ˈpinoʊ nwɑr", "紅葡萄｜黑皮諾", "紅櫻桃、莓果、花香與泥土；酒體較輕，酸度明亮。"],
+        ["Syrah", "sɪˈrɑ", "紅葡萄｜希哈", "黑莓、黑胡椒與煙燻香；酒體通常較飽滿。"],
+        ["Sangiovese", "ˌsændʒoʊˈveɪzeɪ", "紅葡萄｜桑嬌維塞", "酸櫻桃、香草與乾燥草本；酸度適中偏高，適合番茄醬料理。"],
+        ["Tempranillo", "ˌtɛmprəˈniːjoʊ", "紅葡萄｜添帕尼優", "紅莓、李子、皮革與香草；陳年後常有煙草與橡木氣息。"],
+        ["Chardonnay", "ˌʃɑrdənˈeɪ", "白葡萄｜夏多內", "未經橡木時偏檸檬、蘋果；經橡木時可能有奶油、香草與烘烤感。"],
+        ["Sauvignon Blanc", "ˌsoʊvɪnˈjoʊn blɑŋk", "白葡萄｜白蘇維濃", "檸檬、青草、百香果與醋栗；酸度清爽，香氣很鮮明。"],
+        ["Riesling", "ˈrizlɪŋ", "白葡萄｜麗絲玲", "青蘋果、檸檬、桃子與花香；酸度高，可做乾型或甜型。"],
+        ["Pinot Grigio", "ˈpinoʊ ˈgridʒioʊ", "白葡萄｜灰皮諾", "梨子、檸檬與白花；通常清淡、乾爽，適合海鮮。"],
+        ["Grüner Veltliner", "ˈgruːnər ˈvɛltlinər", "白葡萄｜綠維特利納", "青蘋果、柑橘與白胡椒；乾爽、酸度明亮。"]
       ]
     },
     {
