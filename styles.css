@@ -725,6 +725,7 @@ main {
 
 .wine-item p {
   margin: 0 0 5px;
+  font-size: 23px;
   font-weight: 760;
   line-height: 1.35;
 }
