@@ -118,11 +118,11 @@ img {
 main {
   width: min(1180px, 100%);
   margin: 0 auto;
-  padding: clamp(22px, 4vw, 46px);
+  padding: clamp(18px, 3.2vw, 36px) clamp(22px, 4vw, 46px);
 }
 
 .hero {
-  min-height: calc(100vh - 96px);
+  min-height: calc(90vh - 86px);
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(330px, 0.78fr);
   gap: clamp(24px, 5vw, 70px);
@@ -162,7 +162,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .button,
@@ -220,12 +220,12 @@ main {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
-  margin: 8px 0 64px;
+  margin: 8px 0 51px;
 }
 
 .overview article {
   min-height: 132px;
-  padding: 22px;
+  padding: 18px;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(0, 0, 0, 0.07);
@@ -247,13 +247,13 @@ main {
 }
 
 .section {
-  padding: clamp(42px, 8vw, 92px) 0;
+  padding: clamp(34px, 6.4vw, 74px) 0;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .section-heading {
   max-width: 760px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .section-heading.row {
@@ -289,7 +289,7 @@ main {
   position: sticky;
   top: 88px;
   display: grid;
-  gap: 16px;
+  gap: 13px;
 }
 
 .progress-card,
@@ -307,7 +307,7 @@ main {
 }
 
 .progress-card {
-  padding: 22px;
+  padding: 18px;
   border-radius: 24px;
 }
 
@@ -319,7 +319,7 @@ main {
 
 .progress-track {
   height: 8px;
-  margin: 16px 0 14px;
+  margin: 13px 0 11px;
   border-radius: 999px;
   background: #e8e8ed;
   overflow: hidden;
@@ -360,11 +360,11 @@ main {
 }
 
 .lesson-card {
-  min-height: 142px;
+  min-height: 114px;
   display: grid;
   grid-template-columns: 56px minmax(0, 1fr);
   gap: 16px;
-  padding: 20px;
+  padding: 16px;
   border-radius: 24px;
   cursor: pointer;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
@@ -424,7 +424,7 @@ main {
 }
 
 .lesson-card p {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   color: #424245;
   line-height: 1.62;
 }
@@ -432,7 +432,7 @@ main {
 .lesson-link {
   display: inline-flex;
   gap: 8px;
-  margin-top: 14px;
+  margin-top: 11px;
   color: var(--blue);
   font-weight: 720;
 }
@@ -497,14 +497,14 @@ main {
 }
 
 .menu-group {
-  padding: 24px;
+  padding: 19px;
   border-radius: 28px;
 }
 
 .menu-example-list {
   display: grid;
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .menu-example {
@@ -512,7 +512,7 @@ main {
   grid-template-columns: minmax(0, 1fr) minmax(160px, 0.68fr) auto;
   gap: 14px;
   align-items: center;
-  padding: 16px;
+  padding: 13px;
   border-radius: 18px;
   background: var(--soft);
 }
@@ -623,8 +623,8 @@ main {
 }
 
 .vocab-card {
-  min-height: 220px;
-  padding: 22px;
+  min-height: 176px;
+  padding: 18px;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -659,7 +659,7 @@ main {
 }
 
 .phrase-group {
-  padding: 24px;
+  padding: 19px;
   border-radius: 26px;
 }
 
@@ -668,7 +668,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 15px 0;
+  padding: 12px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -690,7 +690,7 @@ main {
 }
 
 .wine-group {
-  padding: 24px;
+  padding: 19px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 26px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(250, 245, 242, 0.86));
@@ -751,8 +751,8 @@ main {
 }
 
 .practice-grid article {
-  min-height: 220px;
-  padding: 26px;
+  min-height: 176px;
+  padding: 21px;
   border-radius: 28px;
 }
 
@@ -781,10 +781,10 @@ main {
 }
 
 .note-form {
-  padding: 24px;
+  padding: 19px;
   border-radius: 26px;
   display: grid;
-  gap: 16px;
+  gap: 13px;
 }
 
 .note-form label {
@@ -808,8 +808,8 @@ main {
 
 .note-card {
   position: relative;
-  min-height: 156px;
-  padding: 24px;
+  min-height: 125px;
+  padding: 19px;
   border-radius: 24px;
 }
 
