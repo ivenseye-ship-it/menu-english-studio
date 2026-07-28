@@ -123,6 +123,55 @@ window.LEARNING_DATA = {
       ]
     },
     {
+      tag: "Red wine regions",
+      title: "紅酒主要國家與產區",
+      items: [
+        ["Bordeaux", "bɔrˈdoʊ", "法國｜波爾多"],
+        ["Burgundy", "ˈbɝgəndi", "法國｜勃根地"],
+        ["Rhône", "roʊn", "法國｜隆河"],
+        ["Tuscany", "ˈtʌskəni", "義大利｜托斯卡尼"],
+        ["Piedmont", "ˈpidˌmɑnt", "義大利｜皮埃蒙特"],
+        ["Rioja", "riˈoʊhə", "西班牙｜里奧哈"],
+        ["Douro", "ˈdʊroʊ", "葡萄牙｜杜羅"],
+        ["Pfalz", "fɑlts", "德國｜法爾茲"],
+        ["Burgenland", "ˈbʊrgənˌlænd", "奧地利｜布爾根蘭"],
+        ["California / Chile / Australia", "ˌkæləˈfɔrnjə / ˈtʃɪli / ɔˈstreɪljə", "新世界｜加州 / 智利 / 澳洲"]
+      ]
+    },
+    {
+      tag: "White wine regions",
+      title: "白酒主要國家與產區",
+      items: [
+        ["Loire", "lwɑr", "法國｜羅亞爾"],
+        ["Alsace", "ælˈsæs", "法國｜阿爾薩斯"],
+        ["Chablis", "ʃæˈbli", "法國｜夏布利"],
+        ["Veneto", "ˈvɛnətoʊ", "義大利｜威尼托"],
+        ["Alto Adige", "ˈæltoʊ ˈɑdɪdʒeɪ", "義大利｜上阿迪傑"],
+        ["Rías Baixas", "ˈriːəs ˈbaɪʃəs", "西班牙｜下海灣"],
+        ["Vinho Verde", "ˈvinjoʊ ˈvɛrdeɪ", "葡萄牙｜綠酒"],
+        ["Mosel / Rheingau", "ˈmoʊzəl / ˈraɪngaʊ", "德國｜摩澤爾 / 萊茵高"],
+        ["Wachau", "ˈvɑkaʊ", "奧地利｜瓦豪"],
+        ["New Zealand / South Africa", "nu ˈzilənd / saʊθ ˈæfrɪkə", "新世界｜紐西蘭 / 南非"]
+      ]
+    },
+    {
+      tag: "Grape varieties",
+      title: "常見葡萄品種",
+      items: [
+        ["Cabernet Sauvignon", "ˌkæbərˈneɪ soʊvɪnˈjoʊn", "紅葡萄｜卡本內蘇維濃"],
+        ["Merlot", "ˈmɝloʊ", "紅葡萄｜梅洛"],
+        ["Pinot Noir", "ˈpinoʊ nwɑr", "紅葡萄｜黑皮諾"],
+        ["Syrah", "sɪˈrɑ", "紅葡萄｜希哈"],
+        ["Sangiovese", "ˌsændʒoʊˈveɪzeɪ", "紅葡萄｜桑嬌維塞"],
+        ["Tempranillo", "ˌtɛmprəˈniːjoʊ", "紅葡萄｜添帕尼優"],
+        ["Chardonnay", "ˌʃɑrdənˈeɪ", "白葡萄｜夏多內"],
+        ["Sauvignon Blanc", "ˌsoʊvɪnˈjoʊn blɑŋk", "白葡萄｜白蘇維濃"],
+        ["Riesling", "ˈrizlɪŋ", "白葡萄｜麗絲玲"],
+        ["Pinot Grigio", "ˈpinoʊ ˈgridʒioʊ", "白葡萄｜灰皮諾"],
+        ["Grüner Veltliner", "ˈgruːnər ˈvɛltlinər", "白葡萄｜綠維特利納"]
+      ]
+    },
+    {
       tag: "Describe it",
       title: "酒單常見形容詞",
       items: [

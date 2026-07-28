@@ -38,7 +38,20 @@ const foreignMenuTerms = new Map([
   ["pincho", "西班牙一口小食"], ["Piquillo", "西班牙皮奎洛紅椒"],
   ["romesco", "西班牙堅果紅椒醬"], ["Patatas bravas", "西班牙辣味馬鈴薯"],
   ["aioli", "蒜味美乃滋"], ["marinière", "法式白酒海鮮醬"],
-  ["Il Tricolore", "義大利三色"], ["pesto", "義大利羅勒青醬"]
+  ["Il Tricolore", "義大利三色"], ["pesto", "義大利羅勒青醬"],
+  ["rosé", "法文：粉紅酒"], ["Bordeaux", "法國波爾多產區"],
+  ["Burgundy", "法國勃根地產區"], ["Rhône", "法國隆河產區"],
+  ["Loire", "法國羅亞爾產區"], ["Alsace", "法國阿爾薩斯產區"],
+  ["Chablis", "法國夏布利產區"], ["Tuscany", "義大利托斯卡尼產區"],
+  ["Piedmont", "義大利皮埃蒙特產區"], ["Veneto", "義大利威尼托產區"],
+  ["Alto Adige", "義大利上阿迪傑產區"], ["Rioja", "西班牙里奧哈產區"],
+  ["Rías Baixas", "西班牙下海灣產區"], ["Douro", "葡萄牙杜羅產區"],
+  ["Vinho Verde", "葡萄牙綠酒產區"], ["Pfalz", "德國法爾茲產區"],
+  ["Mosel", "德國摩澤爾產區"], ["Rheingau", "德國萊茵高產區"],
+  ["Burgenland", "奧地利布爾根蘭產區"], ["Wachau", "奧地利瓦豪產區"],
+  ["Sangiovese", "義大利桑嬌維塞葡萄"], ["Tempranillo", "西班牙添帕尼優葡萄"],
+  ["Sauvignon Blanc", "法文：白蘇維濃葡萄"], ["Pinot Grigio", "義大利文：灰皮諾葡萄"],
+  ["Grüner Veltliner", "德文：綠維特利納葡萄"]
 ]);
 
 const foreignTermPattern = new RegExp(
@@ -320,11 +333,16 @@ function renderWine() {
       <div class="wine-items">
         ${group.items.map(item => {
           const [en, kk, zh] = item;
+          const annotated = annotateForeignTerms(en);
+          const glossary = annotated.meanings.length
+            ? `<span class="foreign-note">非英文詞：${annotated.meanings.map(([term, meaning]) => `${term}＝${meaning}`).join("；")}</span>`
+            : "";
           return `
             <div class="wine-item">
               <div>
-                <p>${en}</p>
+                <p>${annotated.html}</p>
                 <span class="wine-detail">[${kk}] · ${zh}</span>
+                ${glossary}
               </div>
               <button class="audio-button" type="button" data-speak="${en}">播放</button>
             </div>
