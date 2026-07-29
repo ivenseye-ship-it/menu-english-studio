@@ -6,8 +6,12 @@ if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 if (window.location.hash) {
   history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
 }
-window.scrollTo(0, 0);
-window.addEventListener("load", () => window.scrollTo(0, 0), { once: true });
+const forceTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+forceTop();
+window.addEventListener("load", forceTop, { once: true });
+window.addEventListener("pageshow", forceTop);
+window.setTimeout(forceTop, 100);
+window.setTimeout(forceTop, 500);
 
 let activeCategory = data.vocabulary[0].id;
 let activeExamplePage = 0;
