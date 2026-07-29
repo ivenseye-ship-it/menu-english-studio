@@ -2,6 +2,13 @@ const data = window.LEARNING_DATA;
 const progressKey = "menuEnglishCourseProgress";
 const notesKey = "menuEnglishNotes";
 
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+if (window.location.hash) {
+  history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+}
+window.scrollTo(0, 0);
+window.addEventListener("load", () => window.scrollTo(0, 0), { once: true });
+
 let activeCategory = data.vocabulary[0].id;
 let activeExamplePage = 0;
 
