@@ -225,10 +225,10 @@ window.LEARNING_DATA = {
       { en: "steamed vegetables", zh: "蒸蔬菜" }
     ],
     sauces: [
-      { en: "the sauce", zh: "醬汁" },
-      { en: "the dressing", zh: "沙拉醬" },
-      { en: "the pesto", zh: "青醬" },
-      { en: "the gravy", zh: "肉汁" }
+      { en: "sauce", zh: "醬汁" },
+      { en: "dressing", zh: "沙拉醬" },
+      { en: "pesto", zh: "青醬" },
+      { en: "gravy", zh: "肉汁" }
     ],
     pairings: [
       { en: "steak", zh: "牛排" },
