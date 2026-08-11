@@ -750,6 +750,86 @@ main {
   gap: 16px;
 }
 
+.practice-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.practice-toolbar p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.practice-exercise {
+  display: grid;
+  gap: 12px;
+}
+
+.practice-card {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 19px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+.practice-number {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--green);
+  font-weight: 800;
+}
+
+.practice-sentence {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 760;
+  line-height: 1.4;
+}
+
+.practice-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.answer-button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 14px;
+  color: var(--ink);
+  background: var(--soft);
+  font-weight: 720;
+  cursor: pointer;
+}
+
+.answer-button:hover {
+  background: #e8e8ed;
+}
+
+.practice-answer {
+  grid-column: 2 / -1;
+  margin: -2px 0 0;
+  padding-top: 11px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: #515154;
+  line-height: 1.55;
+}
+
 .practice-grid article {
   min-height: 176px;
   padding: 21px;
@@ -942,6 +1022,23 @@ main {
   .phrase-row {
     align-items: start;
     flex-direction: column;
+  }
+
+  .practice-toolbar {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .practice-card {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .practice-actions {
+    grid-column: 2;
+  }
+
+  .practice-answer {
+    grid-column: 1 / -1;
   }
 
   .wine-item {

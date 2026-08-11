@@ -198,6 +198,57 @@ window.LEARNING_DATA = {
       ]
     }
   ],
+  practice: {
+    templates: [
+      { en: "I would like the {dish}, please.", zh: "我想要{dish}，謝謝。" },
+      { en: "Does the {dish} come with {side}?", zh: "{dish} 有附{side}嗎？" },
+      { en: "Is the {dish} spicy?", zh: "{dish} 會辣嗎？" },
+      { en: "Could I have the {sauce} on the side?", zh: "{sauce} 可以另外放嗎？" },
+      { en: "What would you recommend with {pairing}?", zh: "搭配{pairing}你推薦什麼？" },
+      { en: "Could we share the {dish}, please?", zh: "我們可以一起分享{dish}嗎？" },
+      { en: "I would like a glass of {drink}, please.", zh: "我想要一杯{drink}，謝謝。" },
+      { en: "Does this dish contain {allergen}?", zh: "這道菜含有{allergen}嗎？" }
+    ],
+    dishes: [
+      { en: "grilled sea bass", zh: "烤海鱸魚" },
+      { en: "roasted chicken", zh: "烤雞肉" },
+      { en: "seafood platter", zh: "海鮮拼盤" },
+      { en: "mushroom risotto", zh: "蘑菇燉飯" },
+      { en: "tomato soup", zh: "番茄湯" },
+      { en: "vegetable pasta", zh: "蔬菜義大利麵" },
+      { en: "apple tart", zh: "蘋果塔" }
+    ],
+    sides: [
+      { en: "fries", zh: "薯條" },
+      { en: "a salad", zh: "沙拉" },
+      { en: "roasted potatoes", zh: "烤馬鈴薯" },
+      { en: "steamed vegetables", zh: "蒸蔬菜" }
+    ],
+    sauces: [
+      { en: "the sauce", zh: "醬汁" },
+      { en: "the dressing", zh: "沙拉醬" },
+      { en: "the pesto", zh: "青醬" },
+      { en: "the gravy", zh: "肉汁" }
+    ],
+    pairings: [
+      { en: "steak", zh: "牛排" },
+      { en: "seafood", zh: "海鮮" },
+      { en: "the fish", zh: "魚料理" },
+      { en: "this dish", zh: "這道菜" }
+    ],
+    drinks: [
+      { en: "house red", zh: "店內紅酒" },
+      { en: "dry white wine", zh: "不甜的白酒" },
+      { en: "sparkling water", zh: "氣泡水" },
+      { en: "fresh orange juice", zh: "新鮮柳橙汁" }
+    ],
+    allergens: [
+      { en: "nuts", zh: "堅果" },
+      { en: "seafood", zh: "海鮮" },
+      { en: "dairy", zh: "乳製品" },
+      { en: "eggs", zh: "蛋" }
+    ]
+  },
   examples: [
     {
       title: "早餐與早午餐｜完整菜單原文",

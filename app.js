@@ -366,6 +366,45 @@ function renderWine() {
   `).join("");
 }
 
+function pickOne(items) {
+  return items[Math.floor(Math.random() * items.length)];
+}
+
+function generatePractice() {
+  const { templates, dishes, sides, sauces, pairings, drinks, allergens } = data.practice;
+  const used = new Set();
+  const exercises = [];
+
+  while (exercises.length < 5) {
+    const template = pickOne(templates);
+    if (used.has(template.en)) continue;
+    used.add(template.en);
+    const values = {
+      dish: pickOne(dishes),
+      side: pickOne(sides),
+      sauce: pickOne(sauces),
+      pairing: pickOne(pairings),
+      drink: pickOne(drinks),
+      allergen: pickOne(allergens)
+    };
+    const fill = text => text.replace(/\{(\w+)\}/g, (_, key) => values[key]?.en || "");
+    const fillZh = text => text.replace(/\{(\w+)\}/g, (_, key) => values[key]?.zh || "");
+    exercises.push({ en: fill(template.en), zh: fillZh(template.zh) });
+  }
+
+  qs("#practiceExercise").innerHTML = exercises.map((item, index) => `
+    <article class="practice-card">
+      <span class="practice-number">${index + 1}</span>
+      <p class="practice-sentence">${escapeHtml(item.en)}</p>
+      <div class="practice-actions">
+        <button class="answer-button" type="button" data-show-answer>顯示答案</button>
+        <button class="audio-button" type="button" data-speak="${escapeHtml(item.en)}">播放</button>
+      </div>
+      <p class="practice-answer" hidden>中文翻譯：${escapeHtml(item.zh)}</p>
+    </article>
+  `).join("");
+}
+
 function renderNotes() {
   const notes = readJson(notesKey, []);
   qs("#noteCards").innerHTML = notes.length
@@ -390,11 +429,21 @@ function renderNotes() {
 
 function bindEvents() {
   document.addEventListener("click", event => {
+    const answerButton = event.target.closest("[data-show-answer]");
+    if (answerButton) {
+      const answer = qs(".practice-answer", answerButton.closest(".practice-card"));
+      const isHidden = answer.hasAttribute("hidden");
+      answer.toggleAttribute("hidden", !isHidden);
+      answerButton.textContent = isHidden ? "隱藏答案" : "顯示答案";
+      answerButton.setAttribute("aria-expanded", String(isHidden));
+      return;
+    }
     const trigger = event.target.closest("[data-speak]");
     if (trigger) speak(trigger.dataset.speak);
   });
 
   qs("#vocabSearch").addEventListener("input", renderVocabulary);
+  qs("#generatePractice").addEventListener("click", generatePractice);
 
   qs("#resetProgress").addEventListener("click", () => {
     writeJson(progressKey, {});
@@ -439,6 +488,7 @@ function init() {
   renderVocabulary();
   renderPhrases();
   renderWine();
+  generatePractice();
   renderNotes();
   bindEvents();
 }

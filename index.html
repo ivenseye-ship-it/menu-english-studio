@@ -120,27 +120,15 @@
 
     <section id="practice" class="section practice-section">
       <div class="section-heading">
-        <p class="eyebrow">Daily Practice</p>
-        <h2>今天的 10 分鐘練習</h2>
-        <p>每天不用多，照三步驟做：聽、看、說。旅行時真正派上用場的是反覆練過的句子。</p>
+        <p class="eyebrow">AI Daily Practice</p>
+        <h2>每天 5 句菜單英文</h2>
+        <p>先自己讀英文並猜意思，再按「顯示答案」查看中文翻譯；需要跟讀時按「播放」。</p>
       </div>
-      <div class="practice-grid">
-        <article>
-          <span>1</span>
-          <h3>聽 3 句</h3>
-          <p>播放任一口說卡，先聽語調，不急著記全部單字。</p>
-        </article>
-        <article>
-          <span>2</span>
-          <h3>拆 1 道菜</h3>
-          <p>到菜單解讀區，選一道菜，判斷它是海鮮、肉類、醬料或烹飪方式。</p>
-        </article>
-        <article>
-          <span>3</span>
-          <h3>說 1 次完整點餐</h3>
-          <p>用「I would like...」加上一道菜名，練成真正能出口的句子。</p>
-        </article>
+      <div class="practice-toolbar">
+        <p>每次進入頁面會自動準備 5 句，也可以重新生成一組。</p>
+        <button id="generatePractice" class="button soft" type="button">重新生成 5 句</button>
       </div>
+      <div id="practiceExercise" class="practice-exercise" aria-live="polite"></div>
     </section>
 
     <section id="wine" class="section wine-section">
