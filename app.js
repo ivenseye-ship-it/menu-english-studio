@@ -161,7 +161,7 @@ async function speak(text) {
     if (runId !== speechRunId || index >= segments.length) return;
     const utterance = new SpeechSynthesisUtterance(segments[index].text);
     utterance.voice = voice;
-    utterance.lang = voice?.lang || "en-US";
+    utterance.lang = (voice && voice.lang) || "en-US";
     utterance.rate = 0.585;
     utterance.pitch = 1;
     utterance.onend = () => {
@@ -300,7 +300,9 @@ function renderVocabulary() {
   const query = qs("#vocabSearch").value.trim().toLowerCase();
   const active = data.vocabulary.find(category => category.id === activeCategory);
   const source = query
-    ? data.vocabulary.flatMap(category => category.items.map(item => [...item, category.label]))
+    ? data.vocabulary.reduce((items, category) => items.concat(
+      category.items.map(item => item.concat([category.label]))
+    ), [])
     : active.items.map(item => [...item, active.label]);
   const filtered = source.filter(item => item.join(" ").toLowerCase().includes(query));
 
@@ -387,8 +389,14 @@ function generatePractice() {
       drink: pickOne(drinks),
       allergen: pickOne(allergens)
     };
-    const fill = text => text.replace(/\{(\w+)\}/g, (_, key) => values[key]?.en || "");
-    const fillZh = text => text.replace(/\{(\w+)\}/g, (_, key) => values[key]?.zh || "");
+    const fill = text => text.replace(/\{(\w+)\}/g, (_, key) => {
+      const value = values[key];
+      return value ? value.en : "";
+    });
+    const fillZh = text => text.replace(/\{(\w+)\}/g, (_, key) => {
+      const value = values[key];
+      return value ? value.zh : "";
+    });
     exercises.push({ en: fill(template.en), zh: fillZh(template.zh) });
   }
 
@@ -433,7 +441,7 @@ function bindEvents() {
     if (answerButton) {
       const answer = qs(".practice-answer", answerButton.closest(".practice-card"));
       const isHidden = answer.hasAttribute("hidden");
-      answer.toggleAttribute("hidden", !isHidden);
+      answer.hidden = !isHidden;
       answerButton.textContent = isHidden ? "隱藏答案" : "顯示答案";
       answerButton.setAttribute("aria-expanded", String(isHidden));
       return;
