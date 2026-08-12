@@ -666,10 +666,11 @@ main {
 }
 
 .vocab-section .vocab-card {
-  min-height: 144px;
-  padding: 14px;
-  border-radius: 18px;
-  gap: 12px;
+  min-height: 0;
+  padding: 12px 14px;
+  border-radius: 16px;
+  justify-content: flex-start;
+  gap: 9px;
 }
 
 .vocab-section .vocab-card h3 {
@@ -681,8 +682,8 @@ main {
 }
 
 .vocab-section .audio-button {
-  min-height: 34px;
-  padding: 0 14px;
+  min-height: 32px;
+  padding: 0 13px;
 }
 
 .vocab-section .vocab-card p {
