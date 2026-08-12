@@ -642,6 +642,53 @@ main {
   font-weight: 760;
 }
 
+/* Keep the vocabulary area dense while preserving its original type scale. */
+.vocab-section .section-heading {
+  margin-bottom: 16px;
+}
+
+.vocab-section .tabs {
+  gap: 6px;
+  padding: 3px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+}
+
+.vocab-section .tab {
+  min-height: 34px;
+  border-radius: 11px;
+  padding: 0 11px;
+  font-size: 14px;
+}
+
+.vocab-section .vocab-grid {
+  gap: 10px;
+}
+
+.vocab-section .vocab-card {
+  min-height: 144px;
+  padding: 14px;
+  border-radius: 18px;
+  gap: 12px;
+}
+
+.vocab-section .vocab-card h3 {
+  margin-top: 2px;
+}
+
+.vocab-section .kk {
+  margin-top: 5px;
+}
+
+.vocab-section .audio-button {
+  min-height: 34px;
+  padding: 0 14px;
+}
+
+.vocab-section .vocab-card p {
+  margin-bottom: 0;
+}
+
 .audio-button {
   width: fit-content;
   color: var(--blue);
