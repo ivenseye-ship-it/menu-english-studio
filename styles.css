@@ -663,14 +663,16 @@ main {
 
 .vocab-section .vocab-grid {
   gap: 10px;
+  align-items: start;
 }
 
 .vocab-section .vocab-card {
   min-height: 0;
-  padding: 12px 14px;
-  border-radius: 16px;
+  align-self: start;
+  padding: 8px 10px;
+  border-radius: 14px;
   justify-content: flex-start;
-  gap: 9px;
+  gap: 6px;
 }
 
 .vocab-section .vocab-card h3 {
@@ -678,12 +680,12 @@ main {
 }
 
 .vocab-section .kk {
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .vocab-section .audio-button {
-  min-height: 32px;
-  padding: 0 13px;
+  min-height: 30px;
+  padding: 0 11px;
 }
 
 .vocab-section .vocab-card p {
