@@ -32,6 +32,29 @@ window.LEARNING_DATA = {
       ]
     },
     {
+      id: "staples",
+      label: "主食與澱粉",
+      items: [
+        ["pasta / spaghetti / penne", "ˈpɑstə / spəˈɡɛti / ˈpɛneɪ", "義大利麵 / 義大利直麵 / 筆管麵"],
+        ["ravioli / gnocchi / lasagna", "ˌræviˈoʊli / ˈnjɑki / ləˈzɑnjə", "餃子麵 / 馬鈴薯麵糰 / 千層麵"],
+        ["risotto / rice / noodles", "rɪˈzɑtoʊ / raɪs / ˈnudəlz", "燉飯 / 米飯 / 麵條"],
+        ["fries / mashed potatoes", "fraɪz / mæʃt pəˈteɪtoʊz", "薯條 / 馬鈴薯泥"],
+        ["bread roll / baguette / sourdough", "brɛd roʊl / bæˈɡɛt / ˈsaʊərdoʊ", "餐包 / 法國麵包 / 酸種麵包"],
+        ["flatbread / pita", "ˈflætbrɛd / ˈpitə", "扁麵包 / 皮塔餅"]
+      ]
+    },
+    {
+      id: "eggs",
+      label: "蛋料理與早餐",
+      items: [
+        ["scrambled eggs / fried eggs", "ˈskræmbəld ɛɡz / fraɪd ɛɡz", "炒蛋 / 煎蛋"],
+        ["sunny-side up / over easy", "ˌsʌni saɪd ˈʌp / ˌoʊvər ˈizi", "太陽蛋 / 雙面半熟煎蛋"],
+        ["omelette / poached eggs", "ˈɑmlət / poʊtʃt ɛɡz", "歐姆蛋 / 水波蛋"],
+        ["eggs Benedict", "ɛɡz ˈbɛnədɪkt", "班尼迪克蛋"],
+        ["boiled egg / egg yolk / egg white", "bɔɪld ɛɡ / ɛɡ joʊk / ɛɡ waɪt", "水煮蛋 / 蛋黃 / 蛋白"]
+      ]
+    },
+    {
       id: "seafood",
       label: "海鮮",
       items: [
@@ -56,6 +79,17 @@ window.LEARNING_DATA = {
         ["filet mignon", "fɪˌle mɪnˈjɑn", "菲力"],
         ["schnitzel", "ˈʃnɪtsəl", "炸肉排"],
         ["patty", "ˈpæti", "漢堡肉"]
+      ]
+    },
+    {
+      id: "steak",
+      label: "牛排熟度與部位",
+      items: [
+        ["rare / medium rare", "rɛr / ˈmidiəm rɛr", "三分熟 / 五分熟"],
+        ["medium / medium well / well-done", "ˈmidiəm / ˈmidiəm wɛl / ˌwɛl ˈdʌn", "七分熟 / 八分熟 / 全熟"],
+        ["tenderloin / striploin", "ˈtɛndərlɔɪn / ˈstrɪplɔɪn", "菲力 / 紐約客（外脊）"],
+        ["T-bone / ribeye", "ˈtiˌboʊn / ˈrɪbˌaɪ", "丁骨 / 肋眼"],
+        ["How would you like it cooked?", "haʊ wʊd ju laɪk ɪt kʊkt", "您希望牛排幾分熟？"]
       ]
     },
     {
@@ -92,6 +126,41 @@ window.LEARNING_DATA = {
         ["red wine / white wine", "rɛd waɪn / hwaɪt waɪn", "紅酒 / 白酒"],
         ["sparkling wine / champagne", "ˈspɑrklɪŋ waɪn / ʃæmˈpen", "氣泡酒 / 香檳"],
         ["cocktail / cider", "ˈkɑkˌtel / ˈsaɪdɚ", "雞尾酒 / 蘋果酒"]
+      ]
+    },
+    {
+      id: "coffee-dessert",
+      label: "咖啡與甜點",
+      items: [
+        ["espresso / Americano", "ɛˈsprɛsoʊ / əˌmɛrɪˈkɑnoʊ", "濃縮咖啡 / 美式咖啡"],
+        ["latte / cappuccino", "ˈlɑteɪ / ˌkæpuˈtʃinoʊ", "拿鐵 / 卡布奇諾"],
+        ["decaf / oat milk", "ˈdiˌkæf / oʊt mɪlk", "無咖啡因 / 燕麥奶"],
+        ["gelato / ice cream / sorbet", "dʒəˈlɑtoʊ / aɪs krim / sɔrˈbeɪ", "義式冰淇淋 / 冰淇淋 / 雪酪"],
+        ["cheesecake / brownie / tart", "ˈtʃizˌkeɪk / ˈbraʊni / tɑrt", "起司蛋糕 / 布朗尼 / 水果塔"]
+      ]
+    },
+    {
+      id: "dietary",
+      label: "飲食需求與過敏",
+      items: [
+        ["vegetarian / vegan", "ˌvɛdʒəˈtɛriən / ˈviɡən", "素食者 / 純素者"],
+        ["gluten-free / dairy-free", "ˈɡlutən fri / ˈdɛri fri", "無麩質 / 無乳製品"],
+        ["allergy / allergen", "ˈælərdʒi / ˈælərdʒən", "過敏 / 過敏原"],
+        ["nuts / shellfish / dairy", "nʌts / ˈʃɛlˌfɪʃ / ˈdɛri", "堅果 / 甲殼貝類 / 乳製品"],
+        ["Does this contain...?", "dʌz ðɪs kənˈteɪn", "這裡面含有……嗎？"]
+      ]
+    },
+    {
+      id: "fast-food",
+      label: "快餐速食",
+      items: [
+        ["burger / cheeseburger / slider", "ˈbɝɡər / ˈtʃizˌbɝɡər / ˈslaɪdər", "漢堡 / 起司漢堡 / 小漢堡"],
+        ["chicken nuggets / chicken wings", "ˈtʃɪkən ˈnʌɡəts / ˈtʃɪkən wɪŋz", "雞塊 / 雞翅"],
+        ["hot dog / onion rings", "ˈhɑt dɔɡ / ˈʌnjən rɪŋz", "熱狗 / 洋蔥圈"],
+        ["combo / meal deal / set meal", "ˈkɑmboʊ / mil dil / sɛt mil", "套餐 / 優惠組合 / 套餐"],
+        ["dine in / takeaway / drive-through", "daɪn ɪn / ˈteɪkəˌweɪ / ˈdraɪv θru", "內用 / 外帶 / 得來速"],
+        ["regular / large / extra cheese", "ˈrɛɡjələr / lɑrdʒ / ˈɛkstrə tʃiz", "一般 / 大份 / 加起司"],
+        ["no onions / ketchup / barbecue sauce", "noʊ ˈʌnjənz / ˈkɛtʃəp / ˈbɑrbɪkju sɔs", "不要洋蔥 / 番茄醬 / 烤肉醬"]
       ]
     },
     {
@@ -320,6 +389,17 @@ window.LEARNING_DATA = {
         ["Does this contain seafood?", "這含有海鮮嗎？"],
         ["Could you make it without onions?", "可以不要洋蔥嗎？"],
         ["Could I have the sauce on the side?", "醬可以另外放嗎？"]
+      ]
+    },
+    {
+      title: "速食與飲食需求",
+      items: [
+        ["Can I get a combo with no onions?", "我可以要一份不要洋蔥的套餐嗎？"],
+        ["Is this available for takeaway?", "這個可以外帶嗎？"],
+        ["Could I have fries instead of salad?", "我可以把沙拉換成薯條嗎？"],
+        ["I am vegetarian. What would you recommend?", "我是素食者，你推薦什麼？"],
+        ["I have a nut allergy. Does this contain nuts?", "我對堅果過敏，這道含有堅果嗎？"],
+        ["Medium rare, please.", "請做五分熟。"]
       ]
     },
     {

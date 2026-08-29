@@ -1,5 +1,17 @@
 const extraMenuExamples = [
   {
+    title: "快餐速食與外帶｜加強例句",
+    rows: [
+      ["Classic Cheeseburger: beef patty, cheddar cheese, lettuce, tomato, onion, pickles, and house sauce.", "經典起司漢堡：牛肉排、切達起司、生菜、番茄、洋蔥、酸黃瓜與招牌醬。", "patty 是漢堡肉；pickles 是酸黃瓜。"],
+      ["Crispy Chicken Burger: fried chicken, coleslaw, pickles, and mayonnaise.", "香脆炸雞漢堡：炸雞、涼拌高麗菜、酸黃瓜與美乃滋。", "coleslaw 是美式涼拌高麗菜；mayonnaise 通常含蛋。"],
+      ["Chicken Nuggets: six pieces served with ketchup or barbecue sauce.", "雞塊：六塊，搭配番茄醬或烤肉醬。", "served with 表示「附上」；or 表示二選一。"],
+      ["Hot Dog Combo: grilled sausage in a bun, fries, and a soft drink.", "熱狗套餐：麵包夾烤香腸、薯條與一杯汽水。", "combo 表示套餐；bun 是圓麵包。"],
+      ["Pepperoni Pizza Slice: pepperoni, mozzarella, tomato sauce, and chili flakes.", "辣香腸披薩單片：辣香腸、莫札瑞拉、番茄醬與辣椒碎。", "slice 是單片；chili flakes 會增加辣度。"],
+      ["Veggie Wrap: grilled vegetables, hummus, lettuce, tomato, and cucumber in a flatbread.", "蔬菜捲：烤蔬菜、鷹嘴豆泥、生菜、番茄與小黃瓜包入扁麵包。", "適合素食者，但仍可先確認醬料是否含乳製品。"],
+      ["Could I get a large meal deal to go, with extra cheese and no onions?", "我可以要一份大份外帶套餐，加起司、不要洋蔥嗎？", "to go 是北美常用的「外帶」；歐洲常說 takeaway。"]
+    ]
+  },
+  {
     title: "早午餐與蛋料理｜加強例句",
     rows: [
       ["Mediterranean Toast: sun-dried tomato, black olives, avocado, poached eggs, feta cheese, lemon zest, and hazelnut-walnut dukkah.", "地中海吐司：油漬番茄、黑橄欖、酪梨、水波蛋、菲達起司、檸檬皮與榛果核桃香料。", "含蛋、乳製品與堅果。"],
