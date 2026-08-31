@@ -17,6 +17,7 @@ let activeCategory = data.vocabulary[0].id;
 let activeExamplePage = 0;
 let activeSpeakingCategory = "餐廳";
 let activeSpeakingGroupIndex = 0;
+let activeWineGroupIndex = 0;
 
 const foreignMenuTerms = new Map([
   ["Croque Monsieur", "法式火腿起司烤三明治"], ["béchamel", "法式白醬"],
@@ -377,7 +378,15 @@ function renderPhrases() {
 }
 
 function renderWine() {
-  qs("#wineDeck").innerHTML = data.wine.map(group => `
+  const group = data.wine[activeWineGroupIndex];
+  qs("#wineDeck").innerHTML = `
+    <div class="wine-tabs" role="tablist" aria-label="酒類分類">
+      ${data.wine.map((item, index) => `
+        <button class="wine-tab ${index === activeWineGroupIndex ? "active" : ""}"
+          type="button" role="tab" aria-selected="${index === activeWineGroupIndex}"
+          data-wine-group="${index}">${item.tag}</button>
+      `).join("")}
+    </div>
     <article class="wine-group">
       <div class="wine-group-heading">
         <span class="tag">${group.tag}</span>
@@ -405,7 +414,14 @@ function renderWine() {
         }).join("")}
       </div>
     </article>
-  `).join("");
+  `;
+
+  qsa("[data-wine-group]").forEach(button => {
+    button.addEventListener("click", () => {
+      activeWineGroupIndex = Number(button.dataset.wineGroup);
+      renderWine();
+    });
+  });
 }
 
 function pickOne(items) {

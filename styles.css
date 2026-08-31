@@ -814,12 +814,41 @@ main {
 
 .wine-deck {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 10px;
+}
+
+.wine-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.wine-tab {
+  flex: 1 1 130px;
+  border: 0;
+  border-radius: 13px;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: #515154;
+  background: transparent;
+  font: inherit;
+  font-weight: 720;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.wine-tab.active {
+  color: #fff;
+  background: #712f3c;
+  box-shadow: 0 5px 14px rgba(113, 47, 60, 0.2);
 }
 
 .wine-group {
-  padding: 19px;
+  max-width: 920px;
+  padding: 20px 24px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 26px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(250, 245, 242, 0.86));
