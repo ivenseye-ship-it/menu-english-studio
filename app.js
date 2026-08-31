@@ -19,6 +19,15 @@ let activeSpeakingCategory = "餐廳";
 let activeSpeakingGroupIndex = 0;
 let activeWineGroupIndex = 0;
 
+const wineTabLabels = {
+  "Start here": "基本分類",
+  "Red wine regions": "紅酒產區",
+  "White wine regions": "白酒產區",
+  "Grape varieties": "葡萄品種",
+  "Describe it": "風味形容詞",
+  "Order with confidence": "實用點酒句型"
+};
+
 const foreignMenuTerms = new Map([
   ["Croque Monsieur", "法式火腿起司烤三明治"], ["béchamel", "法式白醬"],
   ["ciabatta", "義大利巧巴達麵包"], ["hollandaise", "荷蘭醬"],
@@ -384,7 +393,7 @@ function renderWine() {
       ${data.wine.map((item, index) => `
         <button class="wine-tab ${index === activeWineGroupIndex ? "active" : ""}"
           type="button" role="tab" aria-selected="${index === activeWineGroupIndex}"
-          data-wine-group="${index}">${item.tag}</button>
+          data-wine-group="${index}">${item.tag}｜${wineTabLabels[item.tag]}</button>
       `).join("")}
     </div>
     <article class="wine-group">
