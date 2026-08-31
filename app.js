@@ -15,6 +15,8 @@ window.setTimeout(forceTop, 500);
 
 let activeCategory = data.vocabulary[0].id;
 let activeExamplePage = 0;
+let activeSpeakingCategory = "餐廳";
+let activeSpeakingGroupIndex = 0;
 
 const foreignMenuTerms = new Map([
   ["Croque Monsieur", "法式火腿起司烤三明治"], ["béchamel", "法式白醬"],
@@ -320,10 +322,33 @@ function renderVocabulary() {
 }
 
 function renderPhrases() {
-  qs("#phraseDeck").innerHTML = data.phrases.map(group => `
+  const categories = [...new Set(data.phrases.map(group => group.title.split("｜")[0]))];
+  const groups = data.phrases.filter(group => group.title.startsWith(`${activeSpeakingCategory}｜`));
+  if (activeSpeakingGroupIndex >= groups.length) activeSpeakingGroupIndex = 0;
+  const activeGroup = groups[activeSpeakingGroupIndex];
+
+  qs("#phraseDeck").innerHTML = `
+    <div class="speaking-tabs" role="tablist" aria-label="口說大分類">
+      ${categories.map(category => `
+        <button class="speaking-category-button ${category === activeSpeakingCategory ? "active" : ""}"
+          type="button" role="tab" aria-selected="${category === activeSpeakingCategory}"
+          data-speaking-category="${category}">${category}</button>
+      `).join("")}
+    </div>
+    <div class="speaking-scenario-tabs" role="tablist" aria-label="口說情境">
+      ${groups.map((group, index) => `
+        <button class="speaking-scenario-button ${index === activeSpeakingGroupIndex ? "active" : ""}"
+          type="button" role="tab" aria-selected="${index === activeSpeakingGroupIndex}"
+          data-speaking-group="${index}">${group.title.split("｜")[1]}</button>
+      `).join("")}
+    </div>
     <article class="phrase-group">
-      <h3>${group.title}</h3>
-      ${group.items.map(([en, zh]) => `
+      <div class="phrase-group-heading">
+        <span class="tag">${activeSpeakingCategory} Speaking</span>
+        <h3>${activeGroup.title.split("｜")[1]}</h3>
+        <p>按播放跟讀，熟悉這個情境最常用的完整句子。</p>
+      </div>
+      ${activeGroup.items.map(([en, zh]) => `
         <div class="phrase-row">
           <div>
             <p>${en}</p>
@@ -333,7 +358,22 @@ function renderPhrases() {
         </div>
       `).join("")}
     </article>
-  `).join("");
+  `;
+
+  qsa("[data-speaking-category]").forEach(button => {
+    button.addEventListener("click", () => {
+      activeSpeakingCategory = button.dataset.speakingCategory;
+      activeSpeakingGroupIndex = 0;
+      renderPhrases();
+    });
+  });
+
+  qsa("[data-speaking-group]").forEach(button => {
+    button.addEventListener("click", () => {
+      activeSpeakingGroupIndex = Number(button.dataset.speakingGroup);
+      renderPhrases();
+    });
+  });
 }
 
 function renderWine() {
