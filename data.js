@@ -372,44 +372,134 @@ window.LEARNING_DATA = {
   ],
   phrases: [
     {
-      title: "入座與點餐",
+      title: "餐廳｜訂位與候位",
       items: [
-        ["A table for two, please.", "兩位，謝謝。"],
+        ["I would like to make a reservation for two at seven, please.", "我想訂晚上七點兩位，謝謝。"],
+        ["I have a reservation under Chen.", "我有訂位，姓 Chen。"],
+        ["Do you have a table available tonight?", "今晚有空位嗎？"],
+        ["How long is the wait?", "需要等多久？"],
+        ["Could we wait at the bar?", "我們可以在吧台等嗎？"]
+      ]
+    },
+    {
+      title: "餐廳｜座位與推薦菜",
+      items: [
+        ["Could we have a table by the window?", "我們可以坐窗邊的位置嗎？"],
+        ["Could we move to a quieter table?", "我們可以換到安靜一點的位置嗎？"],
         ["Do you have an English menu?", "請問有英文菜單嗎？"],
-        ["Could I have a few more minutes?", "可以再給我幾分鐘嗎？"],
+        ["What do you recommend?", "你推薦什麼？"],
+        ["What is your most popular dish?", "你們最受歡迎的菜是什麼？"]
+      ]
+    },
+    {
+      title: "餐廳｜點餐與牛排熟度",
+      items: [
         ["I would like the grilled sea bass, please.", "我想要烤海鱸魚，謝謝。"],
-        ["What do you recommend?", "你推薦什麼？"]
+        ["Could I have a few more minutes?", "可以再給我幾分鐘嗎？"],
+        ["How would you like your steak cooked?", "您的牛排想要幾分熟？"],
+        ["Medium rare, please.", "請做五分熟。"],
+        ["Could you cook it a little more?", "可以再幫我煎熟一點嗎？"]
       ]
     },
     {
-      title: "確認食材",
+      title: "餐廳｜客製化與過敏",
       items: [
-        ["Is it spicy?", "這會辣嗎？"],
-        ["Does it come with fries or salad?", "這有附薯條或沙拉嗎？"],
-        ["Does this contain seafood?", "這含有海鮮嗎？"],
         ["Could you make it without onions?", "可以不要洋蔥嗎？"],
-        ["Could I have the sauce on the side?", "醬可以另外放嗎？"]
-      ]
-    },
-    {
-      title: "速食與飲食需求",
-      items: [
-        ["Can I get a combo with no onions?", "我可以要一份不要洋蔥的套餐嗎？"],
-        ["Is this available for takeaway?", "這個可以外帶嗎？"],
+        ["Could I have the sauce on the side?", "醬可以另外放嗎？"],
         ["Could I have fries instead of salad?", "我可以把沙拉換成薯條嗎？"],
         ["I am vegetarian. What would you recommend?", "我是素食者，你推薦什麼？"],
         ["I have a nut allergy. Does this contain nuts?", "我對堅果過敏，這道含有堅果嗎？"],
-        ["Medium rare, please.", "請做五分熟。"]
+        ["Is this gluten-free?", "這個是無麩質的嗎？"]
       ]
     },
     {
-      title: "結帳與旅行",
+      title: "餐廳｜問題處理",
+      items: [
+        ["Excuse me, I think this is not what I ordered.", "不好意思，我想這不是我點的。"],
+        ["My food is cold. Could you warm it up, please?", "我的餐點冷了，可以幫我加熱嗎？"],
+        ["This is too salty for me.", "這對我來說太鹹了。"],
+        ["Could we have some extra napkins, please?", "可以再給我們一些餐巾紙嗎？"],
+        ["Could you bring another glass of water, please?", "可以再給我一杯水嗎？"]
+      ]
+    },
+    {
+      title: "餐廳｜結帳與小費",
       items: [
         ["Could we have the bill, please?", "可以給我們帳單嗎？"],
         ["Can I pay by card?", "可以刷卡嗎？"],
-        ["Where is platform 3?", "第 3 月台在哪裡？"],
+        ["Could we split the bill?", "我們可以分開結帳嗎？"],
+        ["Is service included?", "服務費有包含在內嗎？"],
+        ["Keep the change, please.", "不用找了，謝謝。"]
+      ]
+    },
+    {
+      title: "飯店｜入住與寄放行李",
+      items: [
         ["I have a reservation under Chen.", "我有訂房，姓 Chen。"],
-        ["Could you store my luggage?", "可以寄放我的行李嗎？"]
+        ["I would like to check in, please.", "我想辦理入住，謝謝。"],
+        ["Could you store my luggage before check-in?", "入住前可以幫我寄放行李嗎？"],
+        ["What time is check-in?", "幾點可以入住？"],
+        ["Could I have the Wi-Fi password, please?", "可以給我 Wi-Fi 密碼嗎？"]
+      ]
+    },
+    {
+      title: "飯店｜早餐與房間需求",
+      items: [
+        ["What time is breakfast served?", "早餐供應到幾點？"],
+        ["Is breakfast included in my reservation?", "我的訂房有包含早餐嗎？"],
+        ["Could I have an extra towel, please?", "可以多給我一條毛巾嗎？"],
+        ["Could I have a room with a double bed?", "我可以要一間有雙人床的房間嗎？"],
+        ["Is there a safe in the room?", "房間裡有保險箱嗎？"]
+      ]
+    },
+    {
+      title: "飯店｜房間問題與退房",
+      items: [
+        ["The air conditioning is not working.", "冷氣壞了。"],
+        ["There is no hot water in my room.", "我的房間沒有熱水。"],
+        ["Could someone help me with this, please?", "可以請人幫我處理嗎？"],
+        ["I would like to check out, please.", "我想辦理退房，謝謝。"],
+        ["Could you call a taxi for me?", "可以幫我叫計程車嗎？"]
+      ]
+    },
+    {
+      title: "購物｜尺寸與試穿",
+      items: [
+        ["Do you have this in a larger size?", "這個有大一點的尺寸嗎？"],
+        ["Do you have this in a smaller size?", "這個有小一點的尺寸嗎？"],
+        ["May I try this on?", "我可以試穿嗎？"],
+        ["Where is the fitting room?", "試衣間在哪裡？"],
+        ["Do you have this in another color?", "這個有其他顏色嗎？"]
+      ]
+    },
+    {
+      title: "購物｜付款與退換貨",
+      items: [
+        ["How much is this?", "這個多少錢？"],
+        ["Can I pay by card?", "可以刷卡嗎？"],
+        ["Could I get a receipt, please?", "可以給我收據嗎？"],
+        ["Can I return or exchange this?", "這個可以退貨或換貨嗎？"],
+        ["I would like to exchange this for a different size.", "我想把這個換成不同尺寸。"]
+      ]
+    },
+    {
+      title: "緊急｜藥局與看醫生",
+      items: [
+        ["Where is the nearest pharmacy?", "最近的藥局在哪裡？"],
+        ["I need something for a headache.", "我需要治頭痛的藥。"],
+        ["Do I need a prescription for this?", "這個需要處方箋嗎？"],
+        ["I need to see a doctor.", "我需要看醫生。"],
+        ["I am allergic to penicillin.", "我對盤尼西林過敏。"]
+      ]
+    },
+    {
+      title: "緊急｜遺失物品與求助",
+      items: [
+        ["I have lost my passport.", "我的護照遺失了。"],
+        ["My wallet has been stolen.", "我的錢包被偷了。"],
+        ["Could you help me, please?", "可以幫幫我嗎？"],
+        ["Could you call the police, please?", "可以幫我報警嗎？"],
+        ["I need to contact my embassy.", "我需要聯絡我的大使館。"]
       ]
     }
   ],
