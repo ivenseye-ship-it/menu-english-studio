@@ -1,5 +1,38 @@
 const extraMenuExamples = [
   {
+    title: "義式手工菜單｜前菜與起司",
+    rows: [
+      ["Parmigiana di melanzane (€9.50): fried eggplant with tomato sauce, mozzarella, and Parmesan cheese, baked in the oven.", "茄子帕瑪森焗烤（€9.50）：炸茄子、番茄醬、莫札瑞拉與帕瑪森起司後進烤箱焗烤。", "含茄子、乳製品與油炸食材；baked in the oven 表示經過烤箱焗烤。"],
+      ["Carpaccio di carne (€15.00): 130g of beef marinated with lemon, served with Parmesan, arugula, cherry tomatoes, and citrus mayonnaise with garlic and capers.", "生牛肉薄片（€15.00）：130 克檸檬醃牛肉，搭配帕瑪森、芝麻葉、小番茄，以及蒜味酸橘美乃滋與酸豆。", "carpaccio 通常是生或輕度醃漬的肉類薄片；mayonnaise 通常含蛋。"],
+      ["Vegetales Parrillados (€10.00): grilled eggplant, zucchini, pepper, mushroom, tomato, and cherry tomatoes with balsamic vinegar reduction.", "烤蔬菜拼盤（€10.00）：烤茄子、櫛瓜、甜椒、蘑菇、番茄與小番茄，搭配巴薩米克醋濃縮醬。", "grilled 表示烤製；balsamic vinegar reduction 是濃縮後較甜稠的巴薩米克醋醬。"],
+      ["Ensalada Caprese di bufala (€10.50): mozzarella cheese and tomatoes with balsamic vinegar, pesto, and oregano.", "水牛莫札瑞拉卡布里沙拉（€10.50）：莫札瑞拉起司、番茄、巴薩米克醋、青醬與奧勒岡。", "Caprese 是經典義式番茄起司沙拉；pesto 可能含乳製品與堅果。"],
+      ["Mozzarella Divino (€11.00): Italian smoked mozzarella with Serrano ham, Parmesan, cherry tomatoes, pesto, and balsamic vinegar reduction.", "招牌煙燻莫札瑞拉（€11.00）：義式煙燻莫札瑞拉、塞拉諾火腿、帕瑪森、小番茄、青醬與巴薩米克醋濃縮醬。", "含豬肉、乳製品，青醬可能含堅果；smoked mozzarella 是煙燻莫札瑞拉。"]
+    ]
+  },
+  {
+    title: "義式手工菜單｜千層麵與義大利麵",
+    rows: [
+      ["Lasagna di carne (€12.50): lasagna with Bolognese sauce (beef and pork), mozzarella, béchamel sauce, and Parmesan cheese.", "肉醬千層麵（€12.50）：波隆那醬（牛肉與豬肉）、莫札瑞拉、白醬與帕瑪森起司。", "含牛、豬、乳製品與麩質；Bolognese 是波隆那肉醬。"],
+      ["Lasagna Vegetariana (€12.00): lasagna with béchamel, pesto, mushrooms, mozzarella, and Parmesan cheese.", "蔬食千層麵（€12.00）：白醬、青醬、蘑菇、莫札瑞拉與帕瑪森起司。", "vegetariana 表示蔬食，但含乳製品與麩質；pesto 可能含堅果。"],
+      ["Ravioli 4 quesos (€12.00): ravioli stuffed with ricotta, mascarpone, Parmesan, and pecorino in pink sauce with ham.", "四種起司餃子麵（€12.00）：內餡為瑞可塔、馬斯卡彭、帕瑪森與佩科里諾，搭配粉紅醬與火腿。", "4 quesos 指四種起司；含豬肉、乳製品與麩質。"],
+      ["Tortellini Boscaiola (€12.00): meat-filled tortellini in a creamy sauce with ham, mushrooms, peas, and Parmesan cheese.", "森林風味義式餃子麵（€12.00）：包肉餡的托特里尼，搭配火腿、蘑菇、豌豆與帕瑪森奶油醬。", "Boscaiola 是常見的森林風味，通常有蘑菇與奶油醬。"],
+      ["Tortellini porcini (€12.00): meat-filled tortellini in a creamy porcini mushroom sauce with Parmesan cheese.", "牛肝菌義式餃子麵（€12.00）：包肉餡的托特里尼，搭配牛肝菌奶油醬與帕瑪森起司。", "porcini 是牛肝菌；含肉、乳製品與麩質。"],
+      ["Gnocchi al Pesto Rosso (€12.00): homemade potato-and-egg dumplings with red pesto, basil, Parmesan, garlic, pine nuts, and sun-dried tomato oil.", "紅青醬馬鈴薯麵糰（€12.00）：手工馬鈴薯蛋麵糰，搭配紅青醬、羅勒、帕瑪森、大蒜、松子與油漬番茄油。", "gnocchi 是馬鈴薯麵糰；含蛋、乳製品與松子。"],
+      ["Gnocchi Pomodoro fresco (€12.00): homemade potato-and-egg dumplings in fresh cherry tomato sauce with garlic, basil, and Parmesan cheese.", "新鮮番茄馬鈴薯麵糰（€12.00）：手工馬鈴薯蛋麵糰，搭配小番茄醬、大蒜、羅勒與帕瑪森起司。", "pomodoro fresco 是新鮮番茄風味；含蛋與乳製品。"]
+    ]
+  },
+  {
+    title: "義式手工菜單｜管麵、寬麵與肉丸",
+    rows: [
+      ["Gnocchi Bolognesa (€12.00): homemade potato-and-egg dumplings in Bolognese sauce with beef, pork, and Parmesan cheese.", "波隆那肉醬馬鈴薯麵糰（€12.00）：手工馬鈴薯蛋麵糰，搭配牛豬肉波隆那醬與帕瑪森起司。", "Bolognese 常以牛豬肉慢煮；含蛋、乳製品與肉類。"],
+      ["Rigatoni Bolognesa (€11.00): rigatoni pasta with Bolognese sauce (beef and pork) and Parmesan cheese.", "波隆那肉醬管麵（€11.00）：管麵、牛豬肉波隆那醬與帕瑪森起司。", "rigatoni 是粗管狀義大利麵；含麩質、肉類與乳製品。"],
+      ["Rigatoni Pesto Rosso (€11.00): rigatoni with red pesto sauce, basil, Parmesan, garlic, pine nuts, sun-dried tomato, and oil; spicy on request.", "紅青醬管麵（€11.00）：管麵、紅青醬、羅勒、帕瑪森、大蒜、松子、油漬番茄與橄欖油；可要求加辣。", "pesto rosso 是紅色青醬；含乳製品與松子，spicy on request 表示可選擇加辣。"],
+      ["Fettuccine salsa Porcini (€12.00): homemade pasta with flour and egg in creamy porcini mushroom sauce and Parmesan cheese.", "牛肝菌奶油寬麵（€12.00）：手工麵粉蛋寬麵，搭配牛肝菌奶油醬與帕瑪森起司。", "fettuccine 是寬扁麵；含蛋、麩質與乳製品。"],
+      ["Polpette al sugo: meatballs made with beef, pork, ham, Parmesan, mozzarella, and breadcrumbs in fresh tomato and basil sauce, served with baked potatoes.", "番茄醬肉丸：牛肉、豬肉、火腿、帕瑪森、莫札瑞拉與麵包粉製成的肉丸，搭配新鮮番茄羅勒醬與烤馬鈴薯。", "polpette 是義式肉丸；含牛、豬、乳製品與麩質。"],
+      ["Polpette porcini: meatballs with beef, pork, ham, Parmesan, mozzarella, and breadcrumbs in creamy porcini mushroom sauce, served with baked potatoes.", "牛肝菌醬肉丸：牛肉、豬肉、火腿、帕瑪森、莫札瑞拉與麵包粉肉丸，搭配牛肝菌奶油醬與烤馬鈴薯。", "含牛、豬、乳製品與麩質；porcini mushroom sauce 是牛肝菌奶油醬。"]
+    ]
+  },
+  {
     title: "快餐速食與外帶｜加強例句",
     rows: [
       ["Classic Cheeseburger: beef patty, cheddar cheese, lettuce, tomato, onion, pickles, and house sauce.", "經典起司漢堡：牛肉排、切達起司、生菜、番茄、洋蔥、酸黃瓜與招牌醬。", "patty 是漢堡肉；pickles 是酸黃瓜。"],
