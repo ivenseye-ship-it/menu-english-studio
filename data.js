@@ -269,7 +269,7 @@ window.LEARNING_DATA = {
   ],
   videoLesson: {
     title: "背下這些短句，掌握 60% 的生活英文",
-    description: "完整整理影片中的 100 句生活英文，依情境分組練習；每張字卡都可播放跟讀。",
+    description: "完整整理影片中的 195 句生活英文，已合併重複句型並依情境分組；每張字卡都可播放跟讀。",
     groups: [
       {
         label: "自然反應",
@@ -441,6 +441,137 @@ window.LEARNING_DATA = {
           ["I can't find it.", "", "我找不到它。"],
           ["It's your turn.", "", "輪到你了。"],
           ["What a surprise.", "", "真是個驚喜。"]
+        ]
+      },
+      {
+        label: "鼓勵與肯定",
+        tag: "Encouragement & praise",
+        items: [
+          ["You are the best.", "", "你是最棒的。"],
+          ["I'm so proud.", "", "我真感到驕傲。"],
+          ["Life is great.", "", "生活真美好。"],
+          ["I'm enjoying myself.", "", "我玩得很開心。"],
+          ["This is tough.", "", "這很不容易。"],
+          ["He's so talented.", "", "他很有才華。"],
+          ["I admire his work.", "", "我欣賞他的作品。"],
+          ["I'm feeling optimistic.", "", "我感到很樂觀。"],
+          ["Things will get better.", "", "事情會好轉的。"],
+          ["He's really funny.", "", "他真的很好笑。"],
+          ["I love his sense of humor.", "", "我喜歡他的幽默感。"],
+          ["I trust your decision.", "", "我信任你的決定。"],
+          ["You will get it next time.", "", "你下次會成功的。"],
+          ["I will do my best.", "", "我會盡力。"],
+          ["I won't let you down.", "", "我不會讓你失望。"]
+        ]
+      },
+      {
+        label: "界限與反應",
+        tag: "Boundaries & reactions",
+        items: [
+          ["Do it.", "", "去做吧。"],
+          ["Forget it.", "", "算了。"],
+          ["Just chill.", "", "放輕鬆就好。"],
+          ["Keep calm.", "", "保持冷靜。"],
+          ["Please stop.", "", "請停止。"],
+          ["Don't do that.", "", "不要那樣做。"],
+          ["It's complicated.", "", "情況很複雜。"],
+          ["That's ridiculous.", "", "這太荒謬了。"],
+          ["I can't accept it.", "", "我不能接受。"],
+          ["Speed up.", "", "快一點。"],
+          ["Slow down.", "", "慢一點。"],
+          ["Who's that?", "", "那是誰？"],
+          ["No idea.", "", "不知道。"],
+          ["That's weird.", "", "這很奇怪。"],
+          ["No excuses.", "", "別找藉口。"],
+          ["Just do it.", "", "就去做吧。"]
+        ]
+      },
+      {
+        label: "壓力與忙碌",
+        tag: "Pressure & busy days",
+        items: [
+          ["I'm so frustrated.", "", "我非常挫折。"],
+          ["Things aren't going my way.", "", "事情不如我預期。"],
+          ["I will be waiting.", "", "我會等你。"],
+          ["I'm broke.", "", "我沒錢了。"],
+          ["I'm so busy.", "", "我非常忙。"],
+          ["No time to rest.", "", "沒時間休息。"],
+          ["I made a mistake.", "", "我犯了一個錯。"],
+          ["Let's discuss.", "", "我們討論一下。"],
+          ["I have some ideas.", "", "我有一些想法。"],
+          ["I don't understand.", "", "我不明白。"],
+          ["That's interesting.", "", "這很有意思。"],
+          ["I never thought of that.", "", "我從沒想過這點。"],
+          ["I'm on my way.", "", "我在路上。"],
+          ["I'll be a few minutes late.", "", "我會晚幾分鐘。"],
+          ["I will get back to you.", "", "我會再回覆你。"]
+        ]
+      },
+      {
+        label: "飲食與身體",
+        tag: "Food & physical needs",
+        items: [
+          ["I have a sweet tooth.", "", "我愛吃甜食。"],
+          ["I prefer savory snacks.", "", "我比較喜歡鹹點心。"],
+          ["I love tacos.", "", "我喜歡墨西哥夾餅。"],
+          ["Do you want some?", "", "你要來一些嗎？"],
+          ["What's wrong?", "", "怎麼了？"],
+          ["Check in the drawer.", "", "看看抽屜裡。"],
+          ["Hold my hand.", "", "牽著我的手。"],
+          ["I love you.", "", "我愛你。"],
+          ["You are special.", "", "你很特別。"],
+          ["I didn't expect that.", "", "我沒想到會這樣。"],
+          ["I'm feeling sick.", "", "我覺得不舒服。"],
+          ["I'm just tired.", "", "我只是累了。"],
+          ["I have a headache.", "", "我頭痛。"],
+          ["Drink some water.", "", "喝點水。"],
+          ["Get some rest.", "", "去休息一下。"],
+          ["I'm feeling better.", "", "我感覺好多了。"]
+        ]
+      },
+      {
+        label: "關係與創意",
+        tag: "Relationships & creativity",
+        items: [
+          ["She's such a good friend.", "", "她真是個好朋友。"],
+          ["I can trust her.", "", "我可以信任她。"],
+          ["We are in this together.", "", "我們一起面對這件事。"],
+          ["Keep it real.", "", "保持真實。"],
+          ["Stay true to yourself.", "", "忠於你自己。"],
+          ["I'm all ears.", "", "我洗耳恭聽。"],
+          ["Tell me everything.", "", "全部告訴我。"],
+          ["Let's get creative.", "", "我們來發揮創意。"],
+          ["Think outside the box.", "", "跳脫框架思考。"],
+          ["Happy Friday.", "", "星期五快樂。"],
+          ["Weekend is almost here.", "", "週末快到了。"],
+          ["What are you doing?", "", "你在做什麼？"],
+          ["Just watching TV.", "", "只是在看電視。"],
+          ["Party time.", "", "派對時間到。"],
+          ["Not tonight.", "", "今晚不行。"],
+          ["Cheers to that.", "", "為此乾杯。"],
+          ["Bottoms up.", "", "乾杯／一飲而盡。"]
+        ]
+      },
+      {
+        label: "驚喜與分享",
+        tag: "Surprises & sharing",
+        items: [
+          ["Check it out.", "", "你看看這個。"],
+          ["You won't believe this.", "", "你絕對不會相信這個。"],
+          ["Great game.", "", "好精彩的比賽。"],
+          ["We won.", "", "我們贏了。"],
+          ["Mind-blowing, right?", "", "很驚人，對吧？"],
+          ["Sorry, my mistake.", "", "抱歉，是我弄錯了。"],
+          ["I am loving it.", "", "我非常喜歡。"],
+          ["I am serious.", "", "我是認真的。"],
+          ["You are kidding.", "", "你在開玩笑吧。"],
+          ["Let's clean up.", "", "我們來收拾吧。"],
+          ["I am scared.", "", "我害怕。"],
+          ["I am all ears.", "", "我正在專心聽。"],
+          ["I am almost finished.", "", "我快做完了。"],
+          ["I haven't started yet.", "", "我還沒有開始。"],
+          ["I will meet you there.", "", "我會在那裡和你見面。"],
+          ["I can't do it alone.", "", "我無法獨自完成。"]
         ]
       }
     ]
