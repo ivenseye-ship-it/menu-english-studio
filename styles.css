@@ -797,6 +797,20 @@ main {
   line-height: 1.25;
 }
 
+.video-card h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.video-lesson-section .section-heading h1 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
 .video-card .kk {
   margin: 8px 0;
 }
