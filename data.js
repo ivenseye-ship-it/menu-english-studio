@@ -267,6 +267,68 @@ window.LEARNING_DATA = {
       ]
     }
   ],
+  videoLesson: {
+    title: "背下这些短句，等于60%的生活英文／每天和我一起练／Simple and Practical English",
+    description: "從影片整理出 32 句高頻生活短句，依情境分組練習；每張字卡都可播放跟讀。",
+    groups: [
+      {
+        label: "自然反應",
+        tag: "Everyday reactions",
+        items: [
+          ["Just relax.", "dʒʌst rɪˈlæks", "放輕鬆。"],
+          ["Chill out.", "tʃɪl aʊt", "冷靜一下／放鬆。"],
+          ["Totally agree.", "ˈtoʊtəli əˈɡri", "完全同意。"],
+          ["I see your point.", "aɪ si jʊr pɔɪnt", "我理解你的觀點。"],
+          ["What a mess.", "wʌt ə mɛs", "真是一團亂。"],
+          ["You're kidding.", "jʊr ˈkɪdɪŋ", "你在開玩笑吧。"],
+          ["I'm serious.", "aɪm ˈsɪriəs", "我是認真的。"],
+          ["No worries.", "noʊ ˈwɝiz", "別擔心／沒關係。"]
+        ]
+      },
+      {
+        label: "情緒與鼓勵",
+        tag: "Feelings & encouragement",
+        items: [
+          ["That's awesome.", "ðæts ˈɔsəm", "太棒了。"],
+          ["I can't believe it.", "aɪ kænt bɪˈliv ɪt", "我不敢相信。"],
+          ["Don't give up.", "doʊnt ɡɪv ʌp", "別放棄。"],
+          ["You can do it.", "ju kən du ɪt", "你做得到。"],
+          ["I'm so proud of you.", "aɪm soʊ praʊd əv ju", "我真為你感到驕傲。"],
+          ["I messed up.", "aɪ mɛst ʌp", "我搞砸了。"],
+          ["We all make mistakes.", "wi ɔl meɪk mɪˈsteɪks", "我們都會犯錯。"],
+          ["Keep pushing through.", "kip ˈpʊʃɪŋ θru", "繼續撐下去。"]
+        ]
+      },
+      {
+        label: "溝通與行動",
+        tag: "Conversation & action",
+        items: [
+          ["What do you think?", "wʌt du ju θɪŋk", "你怎麼想？"],
+          ["Let me think.", "lɛt mi θɪŋk", "讓我想一下。"],
+          ["Give me a moment.", "ɡɪv mi ə ˈmoʊmənt", "給我一下時間。"],
+          ["I changed my mind.", "aɪ tʃeɪndʒd maɪ maɪnd", "我改變主意了。"],
+          ["Let me know.", "lɛt mi noʊ", "告訴我一聲。"],
+          ["Keep me updated.", "kip mi ʌpˈdeɪtɪd", "隨時告訴我最新進度。"],
+          ["I'm on my way.", "aɪm ɑn maɪ weɪ", "我正在路上。"],
+          ["I'll be a few minutes late.", "aɪl bi ə fju ˈmɪnɪts leɪt", "我會晚幾分鐘。"]
+        ]
+      },
+      {
+        label: "社交與日常",
+        tag: "Social & daily life",
+        items: [
+          ["How was your day?", "haʊ wəz jʊr deɪ", "你今天過得怎麼樣？"],
+          ["Same here.", "seɪm hɪr", "我也是。"],
+          ["I miss you.", "aɪ mɪs ju", "我想你。"],
+          ["When can we meet?", "wɛn kən wi mit", "我們什麼時候能見面？"],
+          ["Text me later.", "tɛkst mi ˈleɪtər", "晚點傳訊息給我。"],
+          ["Take care.", "teɪk kɛr", "保重。"],
+          ["I need your help.", "aɪ nid jʊr hɛlp", "我需要你的幫忙。"],
+          ["I got your back.", "aɪ ɡɑt jʊr bæk", "我會支持你／我罩你。"]
+        ]
+      }
+    ]
+  },
   practice: {
     templates: [
       { en: "I would like the {dish}, please.", zh: "我想要{dish}，謝謝。" },
