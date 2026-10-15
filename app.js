@@ -448,16 +448,25 @@ function renderVideoLesson() {
   const activeGroup = lesson.groups[activeVideoLessonGroupIndex];
 
   qs("#videoLessonDeck").innerHTML = `
-    <div class="video-lesson-tabs" role="tablist" aria-label="生活英文短句分類">
-      ${lesson.groups.map((group, index) => `
-        <button class="video-lesson-tab ${index === activeVideoLessonGroupIndex ? "active" : ""}"
-          type="button" role="tab" aria-selected="${index === activeVideoLessonGroupIndex}"
-          data-video-lesson-group="${index}">${group.label}</button>
-      `).join("")}
+    <div class="video-lesson-nav">
+      <div class="video-lesson-nav-copy">
+        <span>情境分類</span>
+        <strong>${String(activeVideoLessonGroupIndex + 1).padStart(2, "0")} / ${String(lesson.groups.length).padStart(2, "0")}</strong>
+      </div>
+      <div class="video-lesson-tabs" role="tablist" aria-label="生活英文短句分類">
+        ${lesson.groups.map((group, index) => `
+          <button class="video-lesson-tab ${index === activeVideoLessonGroupIndex ? "active" : ""}"
+            type="button" role="tab" aria-selected="${index === activeVideoLessonGroupIndex}"
+            data-video-lesson-group="${index}">${group.label}</button>
+        `).join("")}
+      </div>
     </div>
     <div class="video-lesson-heading">
-      <span class="tag">${activeGroup.tag}</span>
-      <p>${lesson.description}</p>
+      <div>
+        <span class="tag">${activeGroup.tag}</span>
+        <h2>${activeGroup.label}</h2>
+      </div>
+      <p>${activeGroup.items.length} 句 · ${lesson.description}</p>
     </div>
     <div class="video-card-grid">
       ${activeGroup.items.map(([en, kk, zh]) => `
