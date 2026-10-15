@@ -488,6 +488,29 @@ function renderVideoLesson() {
   });
 }
 
+function renderFranceMenu() {
+  qs("#franceMenuDeck").innerHTML = data.frenchMenu.map(group => `
+    <article class="france-menu-card">
+      <div class="france-menu-card-heading">
+        <span class="tag">${group.tag}</span>
+        <h3>${group.title}</h3>
+      </div>
+      <div class="france-menu-items">
+        ${group.items.map(([en, zh, note]) => `
+          <div class="france-menu-item">
+            <button class="france-menu-audio" type="button" data-speak="${en}" aria-label="播放 ${en}">🔊</button>
+            <div>
+              <strong>${en}</strong>
+              <p>${zh}</p>
+              <small>${note}</small>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </article>
+  `).join("");
+}
+
 function pickOne(items) {
   return items[Math.floor(Math.random() * items.length)];
 }
@@ -642,6 +665,7 @@ function init() {
   renderTabs();
   renderVocabulary();
   renderPhrases();
+  renderFranceMenu();
   renderVideoLesson();
   renderWine();
   generatePractice();

@@ -576,6 +576,52 @@ window.LEARNING_DATA = {
       }
     ]
   },
+  frenchMenu: [
+    {
+      title: "套餐與菜單規則",
+      tag: "How to order",
+      items: [
+        ["set menu / fixed-price menu", "固定價格套餐", "通常包含指定的兩道或三道餐點。"],
+        ["two-course option / three-course meal", "兩道式／三道式套餐", "留意是否包含前菜、主菜與甜點。"],
+        ["today's special / dish of the day", "今日特餐／今日主菜", "每日可能更換，也可能很快售完。"],
+        ["extra charge / supplement", "額外加價", "選擇某道菜或食材需要另外付費。"],
+        ["service included", "服務費已包含", "價格通常已含服務費，不必另計。"]
+      ]
+    },
+    {
+      title: "冬季主菜描述",
+      tag: "Winter mains",
+      items: [
+        ["slow-cooked duck leg", "慢燉鴨腿", "通常肉質軟嫩、風味濃郁。"],
+        ["wine-braised chicken", "紅酒燉雞", "braised 表示以少量液體長時間燉煮。"],
+        ["braised beef stew", "燉牛肉鍋", "常見冬季暖胃主菜。"],
+        ["sausage and bean casserole", "香腸白豆燉鍋", "casserole 是烤皿或燉鍋料理。"],
+        ["melted cheese with potatoes", "融化起司佐馬鈴薯", "常見濃郁冬季起司料理。"]
+      ]
+    },
+    {
+      title: "前菜與食材提醒",
+      tag: "Starters & ingredients",
+      items: [
+        ["pan-fried duck liver", "香煎鴨肝", "liver 是內臟，口感濃郁。"],
+        ["duck liver terrine", "鴨肝凍派／肉醬派", "terrine 通常是冷前菜。"],
+        ["cured meat platter", "熟成冷肉拼盤", "platter 通常適合分享。"],
+        ["beef tartare (raw beef)", "生牛肉塔塔", "raw beef 表示未經烹煮。"],
+        ["garlic butter snails", "蒜香奶油蝸牛", "常見含奶油與貝類過敏原。"]
+      ]
+    },
+    {
+      title: "烹調、醬汁與配菜",
+      tag: "Cooking & sauces",
+      items: [
+        ["pan-seared / oven-roasted", "香煎／烤箱烘烤", "常用於肉類、魚類與根莖蔬菜。"],
+        ["gratinated with cheese", "鋪起司焗烤", "表面通常帶有烤至金黃的起司。"],
+        ["creamy mushroom sauce", "奶油蘑菇醬", "creamy 通常含乳製品。"],
+        ["white wine butter sauce", "白酒奶油醬", "常搭配魚、海鮮或雞肉。"],
+        ["served with seasonal vegetables", "搭配當季蔬菜", "配菜會依供應情況調整。"]
+      ]
+    }
+  ],
   practice: {
     templates: [
       { en: "I would like the {dish}, please.", zh: "我想要{dish}，謝謝。" },
