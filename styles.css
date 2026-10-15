@@ -253,7 +253,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
-  margin: 8px 0 51px;
+  margin: 8px 0 28px;
 }
 
 .overview article {
@@ -759,13 +759,13 @@ main {
 
 .video-lesson-deck {
   display: grid;
-  gap: 12px;
+  gap: 9px;
 }
 
 .video-lesson-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
@@ -776,7 +776,7 @@ main {
   flex: 1 1 140px;
   border: 0;
   border-radius: 13px;
-  padding: 10px 14px;
+  padding: 7px 11px;
   cursor: pointer;
   color: #515154;
   background: transparent;
@@ -811,15 +811,15 @@ main {
 .video-card-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 9px;
 }
 
 .video-card {
   display: flex;
-  min-height: 186px;
+  min-height: 142px;
   flex-direction: column;
   align-items: flex-start;
-  padding: 17px;
+  padding: 13px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(242, 250, 247, 0.86));
@@ -834,7 +834,7 @@ main {
 
 .video-card h2 {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.25;
 }
 
@@ -849,7 +849,7 @@ main {
 }
 
 .video-card .kk {
-  margin: 8px 0;
+  margin: 5px 0;
 }
 
 .video-card > p:last-of-type {

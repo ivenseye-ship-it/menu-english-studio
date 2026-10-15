@@ -268,8 +268,8 @@ window.LEARNING_DATA = {
     }
   ],
   videoLesson: {
-    title: "背下这些短句，等于60%的生活英文／每天和我一起练／Simple and Practical English",
-    description: "從影片整理出 32 句高頻生活短句，依情境分組練習；每張字卡都可播放跟讀。",
+    title: "背下這些短句，掌握 60% 的生活英文",
+    description: "完整整理影片中的 100 句生活英文，依情境分組練習；每張字卡都可播放跟讀。",
     groups: [
       {
         label: "自然反應",
@@ -325,6 +325,122 @@ window.LEARNING_DATA = {
           ["Take care.", "teɪk kɛr", "保重。"],
           ["I need your help.", "aɪ nid jʊr hɛlp", "我需要你的幫忙。"],
           ["I got your back.", "aɪ ɡɑt jʊr bæk", "我會支持你／我罩你。"]
+        ]
+      },
+      {
+        label: "道歉與告別",
+        tag: "Apologies & goodbyes",
+        items: [
+          ["It's all good.", "", "沒事的／一切都好。"],
+          ["I love it.", "", "我很喜歡。"],
+          ["I'm so sorry.", "", "我真的很抱歉。"],
+          ["Apologies for that.", "", "為此向你致歉。"],
+          ["See you later.", "", "晚點見。"],
+          ["See you soon.", "", "很快見。"],
+          ["Sorry, my bad.", "", "抱歉，是我的錯。"],
+          ["No harm done.", "", "沒造成影響／沒關係。"]
+        ]
+      },
+      {
+        label: "心情與狀態",
+        tag: "Feelings & mood",
+        items: [
+          ["I don't know.", "", "我不知道。"],
+          ["I'm not that great.", "", "我沒有那麼厲害。"],
+          ["I'm feeling disappointed.", "", "我感到失望。"],
+          ["I'm over it.", "", "我已經不在意了／我受夠了。"],
+          ["Not bad.", "", "還不錯。"],
+          ["Could be better.", "", "可以更好。"],
+          ["I'm feeling good.", "", "我感覺很好。"],
+          ["I'm so bored.", "", "我好無聊。"]
+        ]
+      },
+      {
+        label: "休閒與計畫",
+        tag: "Leisure & plans",
+        items: [
+          ["What's for dinner?", "", "晚餐吃什麼？"],
+          ["Pizza or sushi?", "", "披薩還是壽司？"],
+          ["Let's find something to do.", "", "我們找點事情做吧。"],
+          ["Ready for an adventure?", "", "準備好去冒險了嗎？"],
+          ["Let's hop in the car.", "", "我們上車吧。"],
+          ["I love this song.", "", "我喜歡這首歌。"],
+          ["Turn up the volume.", "", "把音量調大。"],
+          ["This is fun.", "", "這很好玩。"]
+        ]
+      },
+      {
+        label: "意見與選擇",
+        tag: "Opinions & choices",
+        items: [
+          ["That's cool.", "", "這很酷。"],
+          ["Not my thing.", "", "這不是我的菜。"],
+          ["I believe you.", "", "我相信你。"],
+          ["Prove it to me.", "", "證明給我看。"],
+          ["So true.", "", "太真實了／說得對。"],
+          ["Can't argue with that.", "", "這點無法反駁。"],
+          ["I'm sticking with it.", "", "我決定維持原本的選擇。"],
+          ["It's up to you.", "", "由你決定。"]
+        ]
+      },
+      {
+        label: "工作與進度",
+        tag: "Work & progress",
+        items: [
+          ["I'm on it.", "", "我正在處理。"],
+          ["I forgot.", "", "我忘了。"],
+          ["Busy day ahead.", "", "接下來是忙碌的一天。"],
+          ["Lots to do.", "", "有很多事情要做。"],
+          ["Let me check.", "", "讓我確認一下。"],
+          ["I'll get back to you.", "", "我會再回覆你。"],
+          ["I'm almost finished.", "", "我快完成了。"],
+          ["I haven't started yet.", "", "我還沒開始。"]
+        ]
+      },
+      {
+        label: "健康與狀況",
+        tag: "Health & wellbeing",
+        items: [
+          ["I'm feeling sick.", "", "我覺得不舒服。"],
+          ["Get some rest.", "", "好好休息一下。"],
+          ["I'm scared.", "", "我害怕。"],
+          ["I'm just tired.", "", "我只是累了。"],
+          ["I have a headache.", "", "我頭痛。"],
+          ["Drink some water.", "", "喝點水。"],
+          ["I'm feeling better.", "", "我感覺好多了。"],
+          ["That's good news.", "", "這是好消息。"]
+        ]
+      },
+      {
+        label: "求助與安排",
+        tag: "Help & arrangements",
+        items: [
+          ["I can't do it alone.", "", "我沒辦法一個人完成。"],
+          ["I'll meet you there.", "", "我會在那裡跟你碰面。"],
+          ["I'm in a rush.", "", "我趕時間。"],
+          ["I'll catch you later.", "", "晚點再找你。"],
+          ["Please explain it to me.", "", "請向我解釋一下。"],
+          ["Have a seat.", "", "請坐。"],
+          ["Make yourself comfortable.", "", "請自在一點。"],
+          ["Go ahead.", "", "請繼續／你先請。"]
+        ]
+      },
+      {
+        label: "日常互動",
+        tag: "Everyday interactions",
+        items: [
+          ["Great idea.", "", "好主意。"],
+          ["Terrible plan.", "", "糟糕的計畫。"],
+          ["Pretty good.", "", "相當不錯。"],
+          ["I love your outfit.", "", "我喜歡你的穿搭。"],
+          ["Where did you get it?", "", "你在哪裡買的？"],
+          ["You did a great job.", "", "你做得很棒。"],
+          ["Nice try.", "", "做得不錯，再接再厲。"],
+          ["Take your time.", "", "慢慢來。"],
+          ["What's going on?", "", "怎麼了？"],
+          ["I can't find it.", "", "我找不到它。"],
+          ["It's your turn.", "", "輪到你了。"],
+          ["What a surprise.", "", "真是個驚喜。"]
         ]
       }
     ]

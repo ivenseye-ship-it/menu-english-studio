@@ -463,7 +463,7 @@ function renderVideoLesson() {
       ${activeGroup.items.map(([en, kk, zh]) => `
         <article class="video-card">
           <h2>${en}</h2>
-          <p class="kk">[${kk}]</p>
+          ${kk ? `<p class="kk">[${kk}]</p>` : ""}
           <p>${zh}</p>
           <button class="audio-button" type="button" data-speak="${en}">播放</button>
         </article>
