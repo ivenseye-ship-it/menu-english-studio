@@ -18,6 +18,7 @@ let activeExamplePage = 0;
 let activeSpeakingCategory = "餐廳";
 let activeSpeakingGroupIndex = 0;
 let activeWineGroupIndex = 0;
+let activeVideoLessonGroupIndex = 0;
 
 const wineTabLabels = {
   "Start here": "基本分類",
@@ -442,6 +443,42 @@ function renderWine() {
   });
 }
 
+function renderVideoLesson() {
+  const lesson = data.videoLesson;
+  const activeGroup = lesson.groups[activeVideoLessonGroupIndex];
+
+  qs("#videoLessonDeck").innerHTML = `
+    <div class="video-lesson-tabs" role="tablist" aria-label="生活英文短句分類">
+      ${lesson.groups.map((group, index) => `
+        <button class="video-lesson-tab ${index === activeVideoLessonGroupIndex ? "active" : ""}"
+          type="button" role="tab" aria-selected="${index === activeVideoLessonGroupIndex}"
+          data-video-lesson-group="${index}">${group.label}</button>
+      `).join("")}
+    </div>
+    <div class="video-lesson-heading">
+      <span class="tag">${activeGroup.tag}</span>
+      <p>${lesson.description}</p>
+    </div>
+    <div class="video-card-grid">
+      ${activeGroup.items.map(([en, kk, zh]) => `
+        <article class="video-card">
+          <h2>${en}</h2>
+          <p class="kk">[${kk}]</p>
+          <p>${zh}</p>
+          <button class="audio-button" type="button" data-speak="${en}">播放</button>
+        </article>
+      `).join("")}
+    </div>
+  `;
+
+  qsa("[data-video-lesson-group]").forEach(button => {
+    button.addEventListener("click", () => {
+      activeVideoLessonGroupIndex = Number(button.dataset.videoLessonGroup);
+      renderVideoLesson();
+    });
+  });
+}
+
 function pickOne(items) {
   return items[Math.floor(Math.random() * items.length)];
 }
@@ -548,6 +585,33 @@ function bindEvents() {
     renderNotes();
   });
 
+  const setMainPage = page => {
+    const showLife = page === "life";
+    qs("#menuPage").hidden = showLife;
+    qs("#lifePage").hidden = !showLife;
+    qsa("[data-main-page]").forEach(button => {
+      const active = button.dataset.mainPage === page;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", String(active));
+    });
+    forceTop();
+  };
+
+  qsa("[data-main-page]").forEach(button => {
+    button.addEventListener("click", () => setMainPage(button.dataset.mainPage));
+  });
+
+  qsa("[data-main-page-nav]").forEach(link => {
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      setMainPage(link.dataset.mainPageNav);
+    });
+  });
+
+  qsa(".top-nav a[href^='#']:not([data-main-page-nav])").forEach(link => {
+    link.addEventListener("click", () => setMainPage("menu"));
+  });
+
   const links = qsa(".top-nav a");
   const sections = qsa("main section[id]");
   const observer = new IntersectionObserver(entries => {
@@ -569,6 +633,7 @@ function init() {
   renderTabs();
   renderVocabulary();
   renderPhrases();
+  renderVideoLesson();
   renderWine();
   generatePractice();
   renderNotes();

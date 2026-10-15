@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Menu English Studio</title>
   <meta name="description" content="12月歐洲行英文學習網站：菜單閱讀、點餐句型、KK音標、每週課程與瀏覽器發音練習。">
-  <link rel="stylesheet" href="styles.css?v=20261015-2">
+  <link rel="stylesheet" href="styles.css?v=20261015-3">
   <style id="vocab-layout-fix">
     .vocab-section .vocab-card {
       min-height: 0 !important;
@@ -47,7 +47,7 @@
       <a href="#menu-lab">菜單解讀</a>
       <a href="#vocab">單字庫</a>
       <a href="#speaking">口說</a>
-      <a href="life-english.html">生活短句</a>
+      <a href="#life-english" data-main-page-nav="life">生活短句</a>
       <a href="#practice">練習</a>
       <a href="#wine">酒類</a>
       <a href="#notes">擴充</a>
@@ -55,6 +55,12 @@
   </header>
 
   <main>
+    <div class="main-page-tabs" role="tablist" aria-label="網站主要分類">
+      <button class="main-page-tab active" type="button" role="tab" aria-selected="true" data-main-page="menu">英文菜單</button>
+      <button class="main-page-tab" type="button" role="tab" aria-selected="false" data-main-page="life">生活英文短句</button>
+    </div>
+
+    <div id="menuPage" class="main-page-panel">
     <section id="home" class="hero">
       <div class="hero-copy">
         <p class="eyebrow">For December Europe Trip</p>
@@ -191,6 +197,18 @@
         <div id="noteCards" class="note-cards"></div>
       </div>
     </section>
+    </div>
+
+    <div id="lifePage" class="main-page-panel" hidden>
+      <section id="life-english" class="section video-lesson-section">
+        <div class="section-heading">
+          <p class="eyebrow">Video Flashcards</p>
+          <h1>背下这些短句，等于60%的生活英文／每天和我一起练／Simple and Practical English</h1>
+          <p>從影片內容整理的高頻生活短句。選擇情境、閱讀 KK 音標，再按播放跟讀。</p>
+        </div>
+        <div id="videoLessonDeck" class="video-lesson-deck"></div>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -199,6 +217,6 @@
 
   <script src="data.js?v=20261015-1"></script>
   <script src="menu-examples-extra.js?v=20261002-1"></script>
-  <script src="app.js?v=20261015-2"></script>
+  <script src="app.js?v=20261015-3"></script>
 </body>
 </html>
